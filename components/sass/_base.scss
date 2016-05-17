@@ -1,0 +1,80 @@
+html{
+  font-size: 62.5%;/*1rem становится равным 10px*/
+  box-sizing: border-box;
+}
+
+*,*:before,*:after{
+  box-sizing: inherit;
+}
+
+body{
+	font:$mainFont;
+	background: $backgroundColor;
+	color: $typeDefault;
+  width:100%;
+  height:100% !important;
+}
+
+// #{headings()} {
+// 	font: $headFont;
+// 	color:$headColor;
+// 	font-weight: $bold;
+// }
+
+.container {
+  @include container(80%);
+  position: relative;
+  padding: 0 15px;
+  max-width: $container-max-width;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none outside none;
+
+  li {
+    padding: 0;
+    left: 0;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+//Прибиваем футер книзу
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+    min-width: 90%;
+
+  &:after {
+    content: "";
+    display: block;
+    position: relative;
+    height: $footer-height;
+  }
+}
+
+footer {
+  position: relative;
+  min-width: 90%;
+  height: $footer-height;
+  margin-top: -$footer-height;
+}
+
