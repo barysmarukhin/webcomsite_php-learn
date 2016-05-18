@@ -19,6 +19,20 @@
 @import "mixins";
 @import "base";
 
+//Import Plugins
+@import "plugins/bxslider";
+
 //Import Modules
+@import "modules/waypoints";
+@import "modules/header";
+@import "modules/maingallery";
+@import "modules/about";
+@import "modules/works";
+@import "modules/calltoaction";
+@import "modules/whyus";
+@import "modules/howwork";
+@import "modules/review";
+@import "modules/sendreview";
+@import "modules/footer";
 
 

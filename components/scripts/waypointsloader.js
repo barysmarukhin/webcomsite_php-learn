@@ -1,0 +1,1 @@
+var waypoints = require("../../node_modules/waypoints/lib/jquery.waypoints.min.js");

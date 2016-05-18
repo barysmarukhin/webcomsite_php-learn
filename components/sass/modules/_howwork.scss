@@ -1,0 +1,51 @@
+.howwork{
+  @include backImage("../images/workBg.jpg");
+  padding:30px 0; 
+}
+.howwork__header{
+  @extend .about__header;
+}
+.howwork__text{
+  @extend .about__text;
+}
+.howwork__list{
+  text-align: center;
+  .howwork__list-item{
+    margin: 0 1%;
+    @include inlineblock(top);
+    padding-bottom:50px;
+    width:140px;
+    .howwork__list-header{
+      text-transform: uppercase;
+      font-weight: $bold;
+      font-size: 1.6rem;
+      color:$darkgray;
+      padding:10px 0;
+    }
+    .howwork__list-text{
+      color:$softgray;
+      text-align: center;
+      font-size: 1.2rem;
+      padding:10px 0;
+      line-height: 2.001;
+    }
+    img{
+      margin:0 auto;
+      padding:10px 0;
+    }
+  }
+}
+.howwork__list-image{
+  position:relative;
+}
+.howwork__list-number{
+  position:absolute;
+  @include inlineblock;
+  left:0;
+  bottom:10px;
+  line-height: 30px;
+  color:$light;
+  background-color: $red;
+  width:30px;
+  height:30px;
+}

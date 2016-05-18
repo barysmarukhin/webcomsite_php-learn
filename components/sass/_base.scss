@@ -9,10 +9,10 @@ html{
 
 body{
 	font:$mainFont;
-	background: $backgroundColor;
 	color: $typeDefault;
   width:100%;
   height:100% !important;
+  position:absolute;
 }
 
 // #{headings()} {
@@ -22,7 +22,7 @@ body{
 // }
 
 .container {
-  @include container(80%);
+  @include container();
   position: relative;
   padding: 0 15px;
   max-width: $container-max-width;
@@ -55,26 +55,26 @@ p {
 }
 
 //Прибиваем футер книзу
-.wrapper {
-    position: relative;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    overflow: hidden;
-    min-width: 90%;
+// .wrapper {
+//     position: relative;
+//     min-height: 100%;
+//     height: auto !important;
+//     height: 100%;
+//     overflow: hidden;
+//     min-width: 90%;
 
-  &:after {
-    content: "";
-    display: block;
-    position: relative;
-    height: $footer-height;
-  }
-}
+//   &:after {
+//     content: "";
+//     display: block;
+//     position: relative;
+//     height: $footer-height;
+//   }
+// }
 
-footer {
-  position: relative;
-  min-width: 90%;
-  height: $footer-height;
-  margin-top: -$footer-height;
-}
+// footer {
+//   position: relative;
+//   min-width: 90%;
+//   height: $footer-height;
+//   margin-top: -$footer-height;
+// }
 

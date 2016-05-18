@@ -1,0 +1,36 @@
+.whyus{
+ @extend .about;
+}
+.whyus__header{
+  @extend .about__header;
+}
+.whyus__text{
+  @extend .about__text;
+}
+.whyus__list{
+  text-align: center;
+  .whyus__list-item{
+    margin: 0 2%;
+    @include inlineblock(top);
+    padding-bottom:50px;
+    width:235px;
+    .whyus__list-header{
+      text-transform: uppercase;
+      font-weight: $bold;
+      font-size: 1.6rem;
+      color:$darkgray;
+      padding:10px 0;
+    }
+    .whyus__list-text{
+      color:$softgray;
+      text-align: center;
+      font-size: 1.6rem;
+      padding:10px 0;
+      line-height: 2.001;
+    }
+    img{
+      margin:0 auto;
+      padding:10px 0;
+    }
+  }
+}

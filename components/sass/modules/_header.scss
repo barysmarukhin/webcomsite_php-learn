@@ -1,0 +1,68 @@
+.header{
+  background-color: $backgroundDark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index:1000;
+  border-top:1px solid #262626;
+}
+
+.header__logo{
+  float:left;
+  display:block;
+  margin-right:5%;
+  margin-top: 28px;
+  padding: 12px 0 10px;
+}
+
+.header__list{
+  float:left;
+  width: 65%;
+  @include clearfix;
+  .header__list-item{
+    text-transform: uppercase;   
+    float:left;
+    margin-right: 1%;
+    width: 15%;
+    &:last-child{
+      margin-right:0;
+    }
+    .header__list-link{
+      font-size: 1.3rem;
+      font-weight: $thin;
+      text-decoration: none;
+      color:$light;
+      display:block;
+      padding:45px 0;
+      display: block;
+      text-align: center;
+      letter-spacing: 1px;
+      &.active{
+        color: $navHover;
+        border-bottom: solid 4px $orange;
+        background-color: $darkgray;
+      }
+      &:hover{
+        color: $navHover;
+        border-bottom: solid 4px $orange;
+        background-color: $darkgray;
+      }
+    }  
+  }
+}
+
+.header__phones{
+  float:right;
+  margin-top: 28px;
+  padding: 12px 0 10px;
+  .header__phones-number{
+    font-size: 2.2rem;
+    font-weight: $bold;
+    color:$orange;
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom:0; 
+    }
+  }
+}

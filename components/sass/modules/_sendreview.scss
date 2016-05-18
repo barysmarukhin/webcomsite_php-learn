@@ -1,0 +1,9 @@
+.sendreview{
+  
+}
+.sendreview__header{
+  @extend .about__header;
+}
+.sendreview__text{
+  @extend .about__text;
+}
