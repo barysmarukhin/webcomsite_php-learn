@@ -30,7 +30,6 @@ jsSources = [
   'components/scripts/bxsliderloader.js',
   'components/scripts/waypointsloader.js',
   'components/scripts/jqloader.js',
-  'components/scripts/marquee.js',
   'components/scripts/script.js'
 ];
 sassSources = ['components/sass/style.scss'];

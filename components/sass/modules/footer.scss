@@ -1,0 +1,118 @@
+.footer{
+  color: $light;
+  padding-top:30px;
+}
+.footer__top{
+  background-color: $lightgray;
+  background: url("../images/footerBg.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 55px;
+  padding-bottom: 74px;
+}
+.footer__top-logo{
+  @include span(4 of 12);
+  float:left;
+  text-align: left;
+  .wrapper-img{
+    position:relative;
+    &:after{
+      width:31px;
+      height:6px;
+      content:"";
+      position:absolute;
+      bottom:0;
+      left: 0;
+      background-image: url("../images/separator.png");
+      background-repeat: no-repeat;
+    }
+  }
+  .footer__top-img{
+    padding-bottom: 40px;
+  }
+}
+.footer__top-social{
+  @include span(4 of 12);
+  float:left;
+  text-align: center;
+  .footer__top-header{
+    &:after{
+      left:45%;
+    }
+  }
+}
+.social__list{
+  padding-top:20px;
+  text-align: center;
+  .social__list-item{
+    list-style: none;
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    margin-right: 20px;
+    &:last-child{
+      margin-right: 0;
+    }
+    .social__list-link{
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-indent: -9999px;
+    }
+    
+  }
+}
+
+$socials: instagram, twitter, facebook;
+$socials-map: sprite-map('socials/*.png', $spacing: 70px);
+
+@each $social in $socials {
+  .social__list-link.#{$social} {
+      @include get-sprite($socials-map, $social);
+    }
+}
+
+.footer__top-address{
+  @include span(4 of 12);
+  max-width:230px;
+  text-align:right;
+  float:right;
+  .footer__top-header{
+    &:after{
+      right:0;
+    }
+  }
+}
+.footer__top-header{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: $bold;
+  line-height: 2.25;
+  padding-bottom: 45px;
+  position:relative;
+  letter-spacing:1px;
+  &:after{
+    width:31px;
+    height:6px;
+    content:"";
+    position:absolute;
+    bottom:0;
+    background-image: url("../images/separator.png");
+    background-repeat: no-repeat;
+  }
+}
+.footer__top-text{
+  font-size: 1.4rem;
+  letter-spacing:1px;
+  padding-top:20px;
+}
+.footer__bottom{
+  background-color: $darkgray;
+  border-bottom:2px solid $orange;
+  .footer__bottom-text{
+    text-align: center;
+    padding:20px 0;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing:3px;
+  }
+}

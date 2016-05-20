@@ -1,0 +1,26 @@
+
+.nav_right {
+    position: fixed;
+    top: 180px;
+    right: 1%;
+    // display: none;
+    z-index: 300;
+}
+
+.nav_right li {
+    height: 18px;
+    width: 18px;
+    background: #d6dee1;
+    border-radius: 50%;
+    margin-bottom: 9.5px;
+}
+
+.nav_right li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.nav_right li.activve {
+    background: #c1ee01;
+}

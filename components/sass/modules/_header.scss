@@ -1,19 +1,28 @@
 .header{
   background-color: $backgroundDark;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width:100%;
-  z-index:1000;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width:100%;
+  // z-index:1000;
   border-top:1px solid #262626;
 }
-
+// .mainnav{
+//   display:none;
+// }
+.scrollnav{
+  display:none;
+}
 .header__logo{
   float:left;
   display:block;
   margin-right:5%;
   margin-top: 28px;
   padding: 12px 0 10px;
+  &.scrollLogo{
+    margin-top: 20px;
+    padding: 0;
+  }
 }
 
 .header__list{
@@ -34,10 +43,15 @@
       text-decoration: none;
       color:$light;
       display:block;
-      padding:45px 0;
+      padding-top:45px;
+      height:120px;
       display: block;
       text-align: center;
       letter-spacing: 1px;
+      &.scrollLink{
+        padding-top:30px;
+        height:80px;
+      }
       &.active{
         color: $navHover;
         border-bottom: solid 4px $orange;

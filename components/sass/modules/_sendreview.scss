@@ -1,9 +1,71 @@
 .sendreview{
-  
+  background-color: $light;
+}
+.sendreview .container{
+  max-width:940px;
 }
 .sendreview__header{
   @extend .about__header;
 }
 .sendreview__text{
   @extend .about__text;
+}
+.sendreview__contacts{
+  @include span(5);
+  float:left;
+  .sendreview__contacts-header{
+    color:$orange;
+    font-size: 2.4rem;
+    padding:20px 0;
+    text-transform: uppercase;
+    font-weight: $heavy;
+  }
+  .senreview__contacts-text{
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding:10px 0;
+    font-weight: $normal;
+  }
+}
+.sendreview__sendform{
+  float:right;
+  @include span(7 at 5 of 12);
+}
+.sendreview__sendform-header{
+    color:$darkgray;
+    font-size: 2.4rem;
+    padding:20px 0 15px;
+    text-transform: uppercase;
+    font-weight: $heavy;
+}
+.sendreview__sendform-input, .sendreview__sendform-textarea{
+  width:100%;
+  font-style:italic;
+  text-indent: 2px;
+}
+.sendreview__sendform-input{
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  border-width:1px;
+  border-color: $softgray;
+  outline:none;
+  font-size: 1.8rem;
+}
+.sendreview__sendform-textarea{
+  font-weight: $thin;
+  resize: none;
+  display:block;
+  background: transparent url("../images/textareaLine.png") repeat; 
+  border:none;
+  outline:none;
+  line-height: 21px;
+  font-size: 2.4rem;
+}
+
+.sendreview__sendform-input::-webkit-input-placeholder {
+    color: $typeDefault; /* Цвет подсказывающего текста */
+}
+.sendreview__sendform-textarea::-webkit-input-placeholder{
+  color: $typeDefault; /* Цвет подсказывающего текста */
 }

@@ -14,7 +14,13 @@ body{
   height:100% !important;
   position:absolute;
 }
-
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index:1000;
+}
 // #{headings()} {
 // 	font: $headFont;
 // 	color:$headColor;
@@ -22,7 +28,7 @@ body{
 // }
 
 .container {
-  @include container();
+  @include container(90%);
   position: relative;
   padding: 0 15px;
   max-width: $container-max-width;
@@ -55,13 +61,13 @@ p {
 }
 
 //Прибиваем футер книзу
-// .wrapper {
-//     position: relative;
-//     min-height: 100%;
-//     height: auto !important;
-//     height: 100%;
-//     overflow: hidden;
-//     min-width: 90%;
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  overflow: hidden;
+  min-width: 90%;
 
 //   &:after {
 //     content: "";
@@ -76,5 +82,5 @@ p {
 //   min-width: 90%;
 //   height: $footer-height;
 //   margin-top: -$footer-height;
-// }
+}
 
