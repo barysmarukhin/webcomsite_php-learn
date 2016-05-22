@@ -2,7 +2,7 @@
   background-color: $light;
 }
 .sendreview .container{
-  max-width:940px;
+  max-width:980px;
 }
 .sendreview__header{
   @extend .about__header;
@@ -37,6 +37,7 @@
     padding:20px 0 15px;
     text-transform: uppercase;
     font-weight: $heavy;
+    line-height: 1;
 }
 .sendreview__sendform-input, .sendreview__sendform-textarea{
   width:100%;
@@ -51,6 +52,8 @@
   border-color: $softgray;
   outline:none;
   font-size: 1.8rem;
+  height:20px;
+  line-height: 21px;
 }
 .sendreview__sendform-textarea{
   font-weight: $thin;
@@ -61,6 +64,7 @@
   outline:none;
   line-height: 21px;
   font-size: 2.4rem;
+  margin-bottom:30px;
 }
 
 .sendreview__sendform-input::-webkit-input-placeholder {
@@ -68,4 +72,74 @@
 }
 .sendreview__sendform-textarea::-webkit-input-placeholder{
   color: $typeDefault; /* Цвет подсказывающего текста */
+}
+.sendreview__sendform-addphoto{
+   position:relative;
+   height:60px;
+   margin-bottom:10px;
+}
+.sendreview__sendform-uploadlabel{
+  cursor:pointer;
+  position: absolute;
+  background-color: $orange; 
+  display: inline-block;
+  width: 50px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 3.0rem;
+  text-align: center;
+  text-transform: uppercase;
+  color:$light;
+  left: 0;
+  bottom: 0;
+  @include border-radius(10px);
+}
+.sendreview__sendform-fileupload{
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+.sendreview__sendform-filename{
+  display:none;
+}
+.sendreview__sendform-span{
+  margin-left:60px;
+  line-height: 60px;
+  height:60px;
+  color: #1e292f;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: $heavy;
+}
+.sendreview__sendform-capcha{
+  @include clearfix;
+  position: relative;
+  .sendreview__sendform-label{
+    float:left;
+    width:300px;
+  }
+}
+.sendreview__sendform-picture{
+  background: url(../images/capcha.jpg) 0 0 no-repeat;
+  width:137px;
+  height:41px;
+  margin-top:30px;
+}
+.sendreview__sendform-submit{
+  // position:absolute;
+  // right:0;
+  // bottom:0;
+  margin-top:90px;
+  float:left;
+  color:$light;
+  text-transform: uppercase;
+  width:220px;  
+  text-align: center;
+  height:60px;
+  line-height: 60px;
+  background-color: $orange;
+  @include border-radius(10px);
+  font-size: 1.8rem;
+  border:0;
+  outline:0;
 }

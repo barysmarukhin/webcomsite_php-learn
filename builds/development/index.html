@@ -408,8 +408,8 @@
           </div>
           <form class="sendreview__sendform">
             <label class="sendreview__sendform-label" for="name">
-              <h3 class="sendreview__sendform-header">Ваше имя</h3>
-              <input class="sendreview__sendform-input" type="text" id="name" placeholder="Иванов Иван">
+            <h3 class="sendreview__sendform-header">Ваше имя</h3>
+            <input class="sendreview__sendform-input" type="text" id="name" placeholder="Иванов Иван">
             </label>
             <label class="sendreview__sendform-label" for="email">
               <h3 class="sendreview__sendform-header">e-mail</h3>
@@ -422,7 +422,23 @@
             <label class="sendreview__sendform-label" for="reviewLabel">
               <h3 class="sendreview__sendform-header">Отзыв</h3>
               <textarea class="sendreview__sendform-textarea" rows="5" name="reviewLabel" id="reviewLabel" placeholder="Ваше сообщение"></textarea> 
-            </label>
+            </label>        
+            <div class="sendreview__sendform-addphoto"> 
+              <label class="sendreview__sendform-uploadlabel">+
+                <input id="fileupload" type="file" name="files[]" class="sendreview__sendform-fileupload">
+                <input id="fileurl" type="hidden" class="endreview__sendform-fileurl">
+              </label>
+              <input id="filename" name="filename" class="sendreview__sendform-filename">
+              <span class="sendreview__sendform-span">Фото</span>
+            </div>
+            <div class="sendreview__sendform-capcha">
+              <label class="sendreview__sendform-label" for="capcha">
+                <h3 class="sendreview__sendform-header">Введите код с картинки</h3>
+                <input class="sendreview__sendform-input" type="text" id="capcha">
+                <div class="sendreview__sendform-picture"></div>
+              </label>
+              <input type="submit" class="sendreview__sendform-submit" value="Отправить">
+            </div>     
           </form>
         </article>
       </div>

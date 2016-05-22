@@ -26,17 +26,26 @@
   padding:145px 0 50px;
   position:relative;
   color:$darkgray;
-  border-bottom:2px solid $darkgray;
+  background: url(../images/headerBorder.png) 50% 100% no-repeat;
   &:after{
-    width:826px;
-    height:16px;
-    content:"";
-    position:absolute;
-    bottom:-9px;
-    left:50%;
-    background-image: url("../images/headerBorder.png");
-    background-repeat: no-repeat;
+    content: '';
+    border-bottom:2px solid $darkgray;
+    position: absolute;
+    height:2px;
+    width:48%;
+    bottom:6px;
+    right:0;
   }
+  &:before{
+    content: '';
+    border-bottom:2px solid $darkgray;
+    position: absolute;
+    height:2px;
+    width:48%;
+    bottom:6px;
+    left:0;
+  }
+
 }
 .maingallery_text{
   text-transform: uppercase;
@@ -83,16 +92,10 @@
   text-indent:-9999px;
   &:after{
     content: "";
-    // margin:auto;
-    // position:absolute;
-    // top:50%;
-    // bottom:50%;
     display:block;
     height:11px;
     width:18px;
     @include absolute-center;
-    // background-image: url("../images/scrolldown_arrow.png");
-    // background-repeat: no-repeat;
     background: url(../images/scrolldown_arrow.png) 0 0 no-repeat;
   }
 }
