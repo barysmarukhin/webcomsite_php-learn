@@ -27,9 +27,9 @@ if (env==='development') {
 }
 
 jsSources = [
-  'components/scripts/bxsliderloader.js',
-  'components/scripts/waypointsloader.js',
   'components/scripts/jqloader.js',
+  'components/scripts/jquery.bxslider.min.js',
+  'components/scripts/scroll_module.js',
   'components/scripts/script.js'
 ];
 sassSources = ['components/sass/style.scss'];

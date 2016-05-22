@@ -7,27 +7,34 @@
   // z-index:1000;
   border-top:1px solid #262626;
 }
-// .mainnav{
-//   display:none;
-// }
-.scrollnav{
+.mainnav,.scrollnav{
+  @include breakpoint(0 $wide){
+    display:none;
+  }
+}
+.mobilenav{
   display:none;
+  @include breakpoint(0 $wide){
+    display:block;
+  }
 }
 .header__logo{
   float:left;
   display:block;
-  margin-right:5%;
+  margin-right:4%;
   margin-top: 28px;
   padding: 12px 0 10px;
   &.scrollLogo{
-    margin-top: 20px;
-    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
+  // @include span(2 of 12);
 }
 
 .header__list{
   float:left;
-  width: 65%;
+  // width: 65%;
+  @include span(7 at 2 of 12);
   @include clearfix;
   .header__list-item{
     text-transform: uppercase;   
@@ -67,7 +74,7 @@
 }
 
 .header__phones{
-  float:right;
+  @include span(2 of 12);
   margin-top: 28px;
   padding: 12px 0 10px;
   .header__phones-number{
@@ -77,6 +84,58 @@
     margin-bottom: 10px;
     &:last-child{
       margin-bottom:0; 
+    }
+  }
+}
+.requestLink{
+  display:block;
+  max-width: 195px;
+  min-width:155px;
+  border:1px solid $red;
+  @include border-radius(8px);
+  color:$red;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  height:40px;
+  line-height: 41px;
+  text-align: center;
+  @include span(2 of 12);
+  margin-top: 25px;
+}
+.mobilenav__wrapper{
+  @include clearfix;
+}
+.mobilenav__buttons{
+  float:right;
+  .mobilenav__buttons-img{
+    @include inlineblock(middle);
+    margin:25px 10px 0;
+    cursor:pointer;
+  }
+}
+.mobilenav__list{
+  display:none;
+  text-align: center;
+  margin-top:10px;
+  .mobilenav__list-item{
+    .mobilenav__list-link{
+      display:block;
+      text-transform: uppercase;
+      color:$light;
+      height:50px;
+      line-height: 50px;
+      text-decoration: none;
+      &.active{
+        color: $navHover;
+        border-bottom: solid 4px $orange;
+        background-color: $darkgray;
+      }
+      &:hover{
+        color: $navHover;
+        border-bottom: solid 4px $orange;
+        background-color: $darkgray;
+      }
     }
   }
 }

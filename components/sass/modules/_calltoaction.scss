@@ -18,7 +18,6 @@
   text-decoration: none;
   color: $light;
   text-indent:30px;
-  width:255px;
   height:60px;
   line-height: 60px;
   display: block;
@@ -27,8 +26,6 @@
   background-position: center center;
   background-color: $orange;
   font-size: 1.8rem;
-  border:0;
-  outline: 0;
   position:relative;
   width:250px;
   @include transition(.5s);

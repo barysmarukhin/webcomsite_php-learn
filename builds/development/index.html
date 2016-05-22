@@ -86,31 +86,73 @@
           <li class="header__list-item">
             <a href="#sendreview" class="header__list-link scrollLink">Контакты</a>
           </li>
+          <!-- <li class="requestItem" id="make_a_request">
+            <a href="/" class="requestLink">Оставить заявку</a>
+          </li> -->
         </ul>
-        
+          <a href="#" class="requestLink">Оставить заявку</a>
+      </nav>
+      <nav id="mobilenav" class="mobilenav container"><span class="mobile-trigger"></span>
+        <div class="mobilenav__wrapper">
+          <a href="index.html" class="header__logo scrollLogo">
+            <img src="images/logo.png" alt="Webcom-media logo">
+          </a>
+          <div class="mobilenav__buttons">
+            <img class="mobilenav__buttons-img search" src="images/mobilesearch.png" alt="search button">
+            <img class="mobilenav__buttons-img menu" src="images/mobilemenu.png" alt="search button">
+          </div>
+        </div>
+        <ul class="mobilenav__list">
+          <li class="mobilenav__list-item"><a href="#" class="mobilenav__list-link active">Главная</a></li>
+          <li class="mobilenav__list-item"><a href="#works" class="mobilenav__list-link">Портфолио</a></li>
+          <li class="mobilenav__list-item"><a href="#howwork" class="mobilenav__list-link">Преимущества</a></li>
+          <li class="mobilenav__list-item"><a href="#review" class="mobilenav__list-link">Отзывы</a></li>
+          <li class="mobilenav__list-item"><a href="#sendreview" class="mobilenav__list-link">Контакты</a></li>
+        </ul>
       </nav>
     </header>
     <main>
       <div class="maingallery tracked" data-link="maingallery" id="maingallery">
-        <div class="marquee">
-            <div class="marquee_data">
-              <div class="marquee_panel" data-image="../images/marquee/slider">
-                <!-- <h3>Прекрасные цветы для каждого</h3> -->
-                <p>Выбери свой букет</p>
-                <a class="cta" href="#">Подробнее</a>
-              </div><!-- marquee_panel -->
-              <div class="marquee_panel" data-image="../images/marquee/slider">
-                <!-- <h3>Низкие цены</h3> -->
-                <p>Мы предлагаем свежие цветы по актуальным ценам</p>
-                <a class="cta" href="#">Подробнее</a>
-              </div><!-- marquee_panel -->
-              <div class="marquee_panel" data-image="../images/marquee/slider">
-                <!-- <h3>Подари радость близкому человеку</h3> -->
-                <p>Доставка в любую точку Минска</p>
-                <a class="cta" href="#">Подробнее</a>
-              </div><!-- marquee_panel -->
-            </div><!-- marquee_data -->
-          </div><!-- marquee -->
+        <article class="container">
+          <ul id="maingallery__list" class="maingallery__list">
+            <li class="maingallery__list-item">
+              <div class="maingallery__list-container">
+                <h1 class="maingallery__header">Главный заголовок</h1>
+                <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
+                <a href="#" class="maingallery__link">Оформить заявку</a>
+              </div>
+            </li>
+            <li class="maingallery__list-item">
+              <div class="maingallery__list-container">
+                <h1 class="maingallery__header">Второй заголовок</h1>
+                <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
+                <a href="#" class="maingallery__link">Оформить заявку</a>
+              </div>
+            </li>
+            <li class="maingallery__list-item">
+              <div class="maingallery__list-container">
+                <h1 class="maingallery__header">Третий заголовок</h1>
+                <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
+                <a href="#" class="maingallery__link">Оформить заявку</a>
+              </div>
+            </li>
+            <li class="maingallery__list-item">
+              <div class="maingallery__list-container">
+                <h1 class="maingallery__header">Четвертый заголовок</h1>
+                <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
+                <a href="#" class="maingallery__link">Оформить заявку</a>
+              </div>
+            </li>
+            <li class="maingallery__list-item">
+              <div class="maingallery__list-container">
+                <h1 class="maingallery__header">Пятый заголовок</h1>
+                <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
+                <a href="#" class="maingallery__link">Оформить заявку</a>
+              </div>
+            </li>
+          </ul>
+          <a href="#about" class="maingallery__scrolldown">scrolldown text</a>
+        </article>
       </div>
       <div class="about tracked" data-link="about" id="about">
         <article class="container">
@@ -305,6 +347,44 @@
       <div class="review tracked" data-link="review" id="review">
         <article class="container">
           <h2 class="review__header">Отзывы о нашей компании</h2>
+          <ul class="review__wrapper">
+            <li class="review__slide">
+              <div class="review__container">
+                <div class="review__imgwrapper">
+                  <img src="images/photoPerson.png" alt="photo person" class="review__photo">
+                </div>
+                <div class="review__textwrapper">
+                  <p class="review__textwrapper-name"><span>Имя Фамилия,</span> должность</p>
+                  <p class="review__textwrapper-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                  <a href="#" class="review__textwrapper-link">Все отзывы</a>
+                </div>
+              </div>
+            </li>
+            <li class="review__slide">
+              <div class="review__container">
+                <div class="review__imgwrapper">
+                  <img src="images/photoPerson.png" alt="photo person" class="review__photo">
+                </div>
+                <div class="review__textwrapper">
+                  <p class="review__textwrapper-name"><span>Иван Иванов,</span> должность</p>
+                  <p class="review__textwrapper-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                  <a href="#" class="review__textwrapper-link">Все отзывы</a>
+                </div>
+              </div>
+            </li>
+            <li class="review__slide">
+              <div class="review__container">
+                <div class="review__imgwrapper">
+                  <img src="images/photoPerson.png" alt="photo person" class="review__photo">
+                </div>
+                <div class="review__textwrapper">
+                  <p class="review__textwrapper-name"><span>Петр Петров,</span> должность</p>
+                  <p class="review__textwrapper-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                  <a href="#" class="review__textwrapper-link">Все отзывы</a>
+                </div>
+              </div>
+            </li>
+          </ul>      
           <!-- Код слайдера -->
         </article>
       </div>

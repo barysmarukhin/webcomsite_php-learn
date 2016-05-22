@@ -1,11 +1,11 @@
 @include border-box-sizing; //for older IE
 
-$container-max-width: 1200px;
+$container-max-width: 1400px;
 $footer-height: 312px;
 
 $susy: (
   columns: 12,
-  container: 90%,
+  container: 95%,
   gutters: 1/4,
   gutter-position: inside
 );

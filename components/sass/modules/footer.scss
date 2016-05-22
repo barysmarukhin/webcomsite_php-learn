@@ -49,6 +49,10 @@
     height: 26px;
     width: 26px;
     margin-right: 20px;
+    @include transition(.3s);
+    &:hover{
+      @include transform(rotate(10deg));
+    }
     &:last-child{
       margin-right: 0;
     }

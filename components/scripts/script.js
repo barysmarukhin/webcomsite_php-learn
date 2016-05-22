@@ -1,3 +1,14 @@
+$(document).ready(function(){
+  $('#maingallery__list').bxSlider({
+    auto: true
+  });
+  $('.review__wrapper').bxSlider({
+    auto: true,
+    pager: false
+  });
+});
+
+
 // $(function() {
 //     var navLi = $('.nav_right li');
 //     var mainNav = $('a.nav');

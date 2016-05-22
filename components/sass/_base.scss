@@ -3,9 +3,9 @@ html{
   box-sizing: border-box;
 }
 
-*,*:before,*:after{
-  box-sizing: inherit;
-}
+// *,*:before,*:after{
+//   box-sizing: inherit;
+// }
 
 body{
 	font:$mainFont;
@@ -14,12 +14,18 @@ body{
   height:100% !important;
   position:absolute;
 }
+.displayblock{
+  display:block!important;
+}
+.displaynone{
+  display:none!important;
+}
 .fixed{
   position: fixed;
   top: 0;
   left: 0;
   width:100%;
-  z-index:1000;
+  z-index:10000;
 }
 // #{headings()} {
 // 	font: $headFont;
@@ -83,4 +89,3 @@ p {
 //   height: $footer-height;
 //   margin-top: -$footer-height;
 }
-
