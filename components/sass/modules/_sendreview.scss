@@ -12,6 +12,10 @@
 }
 .sendreview__contacts{
   @include span(5);
+  @include breakpoint(0 $medium){
+    float:none;
+    width:100%;
+  }
   float:left;
   .sendreview__contacts-header{
     color:$orange;
@@ -30,6 +34,16 @@
 .sendreview__sendform{
   float:right;
   @include span(7 at 5 of 12);
+  @include breakpoint(0 $medium){
+    float:none;
+    width:100%;
+    h3{
+      text-align: center;
+    }
+    .sendreview__sendform-capcha h3{
+      text-align: left;
+    }
+  }
 }
 .sendreview__sendform-header{
     color:$darkgray;
@@ -116,7 +130,8 @@
   position: relative;
   .sendreview__sendform-label{
     float:left;
-    width:300px;
+    min-width:300px;
+    width:50%;
   }
 }
 .sendreview__sendform-picture{
@@ -126,9 +141,6 @@
   margin-top:30px;
 }
 .sendreview__sendform-submit{
-  // position:absolute;
-  // right:0;
-  // bottom:0;
   margin-top:90px;
   float:left;
   color:$light;
@@ -142,4 +154,10 @@
   font-size: 1.8rem;
   border:0;
   outline:0;
+  @include breakpoint($small $medium){
+    float:right;
+  }
+  @include breakpoint(0 $small){
+    float:left;
+  }
 }

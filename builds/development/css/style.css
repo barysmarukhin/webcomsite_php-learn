@@ -635,20 +635,32 @@ p {
 }
 /* line 195, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-prev {
-  left: 20px;
+  left: 0;
   background: url(../images/controls/sliderLeftArrow.png) 0 0 no-repeat;
 }
-/* line 199, ../../../components/sass/modules/_maingallery.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 195, ../../../components/sass/modules/_maingallery.scss */
+  .maingallery .bx-wrapper .bx-prev {
+    left: 0;
+  }
+}
+/* line 202, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-prev:hover,
 .maingallery .bx-wrapper .bx-prev:focus {
   background-position: 0 0;
 }
-/* line 203, ../../../components/sass/modules/_maingallery.scss */
+/* line 206, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-next {
-  right: 20px;
+  right: 0;
   background: url(../images/controls/sliderRightArrow.png) 0 0 no-repeat;
 }
-/* line 211, ../../../components/sass/modules/_maingallery.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 206, ../../../components/sass/modules/_maingallery.scss */
+  .maingallery .bx-wrapper .bx-next {
+    right: 0;
+  }
+}
+/* line 217, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 50%;
@@ -659,15 +671,15 @@ p {
   text-indent: -9999px;
   z-index: 9999;
 }
-/* line 221, ../../../components/sass/modules/_maingallery.scss */
+/* line 227, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
-/* line 225, ../../../components/sass/modules/_maingallery.scss */
+/* line 231, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls-auto {
   text-align: center;
 }
-/* line 228, ../../../components/sass/modules/_maingallery.scss */
+/* line 234, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls-auto .bx-start {
   display: block;
   text-indent: -9999px;
@@ -677,13 +689,13 @@ p {
   background: url("images/controls.png") -86px -11px no-repeat;
   margin: 0 3px;
 }
-/* line 237, ../../../components/sass/modules/_maingallery.scss */
+/* line 243, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls-auto .bx-start:hover,
 .maingallery .bx-wrapper .bx-controls-auto .bx-start.active,
 .maingallery .bx-wrapper .bx-controls-auto .bx-start:focus {
   background-position: -86px 0;
 }
-/* line 242, ../../../components/sass/modules/_maingallery.scss */
+/* line 248, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls-auto .bx-stop {
   display: block;
   text-indent: -9999px;
@@ -693,23 +705,23 @@ p {
   background: url("images/controls.png") -86px -44px no-repeat;
   margin: 0 3px;
 }
-/* line 251, ../../../components/sass/modules/_maingallery.scss */
+/* line 257, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls-auto .bx-stop:hover,
 .maingallery .bx-wrapper .bx-controls-auto .bx-stop.active,
 .maingallery .bx-wrapper .bx-controls-auto .bx-stop:focus {
   background-position: -86px -33px;
 }
-/* line 257, ../../../components/sass/modules/_maingallery.scss */
+/* line 263, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
   text-align: left;
   width: 80%;
 }
-/* line 261, ../../../components/sass/modules/_maingallery.scss */
+/* line 267, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   right: 0;
   width: 35px;
 }
-/* line 266, ../../../components/sass/modules/_maingallery.scss */
+/* line 272, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-caption {
   position: absolute;
   bottom: 0;
@@ -718,7 +730,7 @@ p {
   background: rgba(80, 80, 80, 0.75);
   width: 100%;
 }
-/* line 274, ../../../components/sass/modules/_maingallery.scss */
+/* line 280, ../../../components/sass/modules/_maingallery.scss */
 .maingallery .bx-wrapper .bx-caption span {
   color: transparent;
   font-family: Arial;
@@ -727,7 +739,6 @@ p {
   padding: 10px;
 }
 
-/* MARQUEE STYLES */
 /* line 1, ../../../components/sass/modules/_about.scss */
 .about, .whyus {
   background-color: #FFFFFF;
@@ -1215,17 +1226,29 @@ p {
   left: 20px;
   background: url(../images/controls/reviewLeftArrow.png) 0 0 no-repeat;
 }
-/* line 145, ../../../components/sass/modules/_review.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 141, ../../../components/sass/modules/_review.scss */
+  .review .bx-wrapper .bx-prev {
+    left: 0;
+  }
+}
+/* line 148, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-prev:hover,
 .review .bx-wrapper .bx-prev:focus {
   background-position: 0 0;
 }
-/* line 149, ../../../components/sass/modules/_review.scss */
+/* line 152, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-next {
   right: 20px;
   background: url(../images/controls/reviewRightArrow.png) 0 0 no-repeat;
 }
-/* line 157, ../../../components/sass/modules/_review.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 152, ../../../components/sass/modules/_review.scss */
+  .review .bx-wrapper .bx-next {
+    right: 0;
+  }
+}
+/* line 163, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 50%;
@@ -1236,15 +1259,15 @@ p {
   text-indent: -9999px;
   z-index: 9999;
 }
-/* line 167, ../../../components/sass/modules/_review.scss */
+/* line 173, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
-/* line 171, ../../../components/sass/modules/_review.scss */
+/* line 177, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls-auto {
   text-align: center;
 }
-/* line 174, ../../../components/sass/modules/_review.scss */
+/* line 180, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls-auto .bx-start {
   display: block;
   text-indent: -9999px;
@@ -1254,13 +1277,13 @@ p {
   background: url("images/controls.png") -86px -11px no-repeat;
   margin: 0 3px;
 }
-/* line 183, ../../../components/sass/modules/_review.scss */
+/* line 189, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls-auto .bx-start:hover,
 .review .bx-wrapper .bx-controls-auto .bx-start.active,
 .review .bx-wrapper .bx-controls-auto .bx-start:focus {
   background-position: -86px 0;
 }
-/* line 188, ../../../components/sass/modules/_review.scss */
+/* line 194, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls-auto .bx-stop {
   display: block;
   text-indent: -9999px;
@@ -1270,23 +1293,23 @@ p {
   background: url("images/controls.png") -86px -44px no-repeat;
   margin: 0 3px;
 }
-/* line 197, ../../../components/sass/modules/_review.scss */
+/* line 203, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls-auto .bx-stop:hover,
 .review .bx-wrapper .bx-controls-auto .bx-stop.active,
 .review .bx-wrapper .bx-controls-auto .bx-stop:focus {
   background-position: -86px -33px;
 }
-/* line 203, ../../../components/sass/modules/_review.scss */
+/* line 209, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
   text-align: left;
   width: 80%;
 }
-/* line 207, ../../../components/sass/modules/_review.scss */
+/* line 213, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   right: 0;
   width: 35px;
 }
-/* line 212, ../../../components/sass/modules/_review.scss */
+/* line 218, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-caption {
   position: absolute;
   bottom: 0;
@@ -1295,7 +1318,7 @@ p {
   background: rgba(80, 80, 80, 0.75);
   width: 100%;
 }
-/* line 220, ../../../components/sass/modules/_review.scss */
+/* line 226, ../../../components/sass/modules/_review.scss */
 .review .bx-wrapper .bx-caption span {
   color: transparent;
   font-family: Arial;
@@ -1325,7 +1348,14 @@ p {
   padding-right: 0.83333%;
   float: left;
 }
-/* line 16, ../../../components/sass/modules/_sendreview.scss */
+@media (min-width: 0) and (max-width: 960px) {
+  /* line 13, ../../../components/sass/modules/_sendreview.scss */
+  .sendreview__contacts {
+    float: none;
+    width: 100%;
+  }
+}
+/* line 20, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__contacts .sendreview__contacts-header {
   color: #ff8207;
   font-size: 2.4rem;
@@ -1333,7 +1363,7 @@ p {
   text-transform: uppercase;
   font-weight: 800;
 }
-/* line 23, ../../../components/sass/modules/_sendreview.scss */
+/* line 27, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__contacts .senreview__contacts-text {
   font-size: 1.6rem;
   line-height: 1.2;
@@ -1341,7 +1371,7 @@ p {
   font-weight: 400;
 }
 
-/* line 30, ../../../components/sass/modules/_sendreview.scss */
+/* line 34, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform {
   float: right;
   -moz-box-sizing: border-box;
@@ -1352,8 +1382,23 @@ p {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
+@media (min-width: 0) and (max-width: 960px) {
+  /* line 34, ../../../components/sass/modules/_sendreview.scss */
+  .sendreview__sendform {
+    float: none;
+    width: 100%;
+  }
+  /* line 40, ../../../components/sass/modules/_sendreview.scss */
+  .sendreview__sendform h3 {
+    text-align: center;
+  }
+  /* line 43, ../../../components/sass/modules/_sendreview.scss */
+  .sendreview__sendform .sendreview__sendform-capcha h3 {
+    text-align: left;
+  }
+}
 
-/* line 34, ../../../components/sass/modules/_sendreview.scss */
+/* line 48, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-header {
   color: #1e292f;
   font-size: 2.4rem;
@@ -1363,14 +1408,14 @@ p {
   line-height: 1;
 }
 
-/* line 42, ../../../components/sass/modules/_sendreview.scss */
+/* line 56, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-input, .sendreview__sendform-textarea {
   width: 100%;
   font-style: italic;
   text-indent: 2px;
 }
 
-/* line 47, ../../../components/sass/modules/_sendreview.scss */
+/* line 61, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-input {
   border-left: none;
   border-right: none;
@@ -1383,7 +1428,7 @@ p {
   line-height: 21px;
 }
 
-/* line 58, ../../../components/sass/modules/_sendreview.scss */
+/* line 72, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-textarea {
   font-weight: 200;
   resize: none;
@@ -1396,26 +1441,26 @@ p {
   margin-bottom: 30px;
 }
 
-/* line 70, ../../../components/sass/modules/_sendreview.scss */
+/* line 84, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-input::-webkit-input-placeholder {
   color: #8198a0;
   /* ╨ж╨▓╨╡╤В ╨┐╨╛╨┤╤Б╨║╨░╨╖╤Л╨▓╨░╤О╤Й╨╡╨│╨╛ ╤В╨╡╨║╤Б╤В╨░ */
 }
 
-/* line 73, ../../../components/sass/modules/_sendreview.scss */
+/* line 87, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-textarea::-webkit-input-placeholder {
   color: #8198a0;
   /* ╨ж╨▓╨╡╤В ╨┐╨╛╨┤╤Б╨║╨░╨╖╤Л╨▓╨░╤О╤Й╨╡╨│╨╛ ╤В╨╡╨║╤Б╤В╨░ */
 }
 
-/* line 76, ../../../components/sass/modules/_sendreview.scss */
+/* line 90, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-addphoto {
   position: relative;
   height: 60px;
   margin-bottom: 10px;
 }
 
-/* line 81, ../../../components/sass/modules/_sendreview.scss */
+/* line 95, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-uploadlabel {
   cursor: pointer;
   position: absolute;
@@ -1438,19 +1483,19 @@ p {
   background-clip: padding-box;
 }
 
-/* line 97, ../../../components/sass/modules/_sendreview.scss */
+/* line 111, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-fileupload {
   position: absolute;
   top: 0;
   left: -9999px;
 }
 
-/* line 102, ../../../components/sass/modules/_sendreview.scss */
+/* line 116, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-filename {
   display: none;
 }
 
-/* line 105, ../../../components/sass/modules/_sendreview.scss */
+/* line 119, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-span {
   margin-left: 60px;
   line-height: 60px;
@@ -1461,7 +1506,7 @@ p {
   font-weight: 800;
 }
 
-/* line 114, ../../../components/sass/modules/_sendreview.scss */
+/* line 128, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-capcha {
   position: relative;
 }
@@ -1474,13 +1519,14 @@ p {
 .sendreview__sendform-capcha:after {
   clear: both;
 }
-/* line 117, ../../../components/sass/modules/_sendreview.scss */
+/* line 131, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-capcha .sendreview__sendform-label {
   float: left;
-  width: 300px;
+  min-width: 300px;
+  width: 50%;
 }
 
-/* line 122, ../../../components/sass/modules/_sendreview.scss */
+/* line 137, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-picture {
   background: url(../images/capcha.jpg) 0 0 no-repeat;
   width: 137px;
@@ -1488,7 +1534,7 @@ p {
   margin-top: 30px;
 }
 
-/* line 128, ../../../components/sass/modules/_sendreview.scss */
+/* line 143, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-submit {
   margin-top: 90px;
   float: left;
@@ -1509,6 +1555,18 @@ p {
   border: 0;
   outline: 0;
 }
+@media (min-width: 650px) and (max-width: 960px) {
+  /* line 143, ../../../components/sass/modules/_sendreview.scss */
+  .sendreview__sendform-submit {
+    float: right;
+  }
+}
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 143, ../../../components/sass/modules/_sendreview.scss */
+  .sendreview__sendform-submit {
+    float: left;
+  }
+}
 
 /* line 1, ../../../components/sass/modules/footer.scss */
 .footer {
@@ -1524,8 +1582,17 @@ p {
   padding-top: 55px;
   padding-bottom: 74px;
 }
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 5, ../../../components/sass/modules/footer.scss */
+  .footer__top {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
-/* line 12, ../../../components/sass/modules/footer.scss */
+/* line 16, ../../../components/sass/modules/footer.scss */
 .footer__top-logo {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1537,11 +1604,21 @@ p {
   float: left;
   text-align: left;
 }
-/* line 16, ../../../components/sass/modules/footer.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 16, ../../../components/sass/modules/footer.scss */
+  .footer__top-logo {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 70px;
+  }
+}
+/* line 27, ../../../components/sass/modules/footer.scss */
 .footer__top-logo .wrapper-img {
   position: relative;
 }
-/* line 18, ../../../components/sass/modules/footer.scss */
+/* line 29, ../../../components/sass/modules/footer.scss */
 .footer__top-logo .wrapper-img:after {
   width: 31px;
   height: 6px;
@@ -1552,12 +1629,24 @@ p {
   background-image: url("../images/separator.png");
   background-repeat: no-repeat;
 }
-/* line 29, ../../../components/sass/modules/footer.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 29, ../../../components/sass/modules/footer.scss */
+  .footer__top-logo .wrapper-img:after {
+    left: 45%;
+  }
+}
+/* line 43, ../../../components/sass/modules/footer.scss */
 .footer__top-logo .footer__top-img {
   padding-bottom: 40px;
 }
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 43, ../../../components/sass/modules/footer.scss */
+  .footer__top-logo .footer__top-img {
+    margin-left: 14.6%;
+  }
+}
 
-/* line 33, ../../../components/sass/modules/footer.scss */
+/* line 50, ../../../components/sass/modules/footer.scss */
 .footer__top-social {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1568,18 +1657,31 @@ p {
   padding-right: 0.83333%;
   float: left;
   text-align: center;
+  position: relative;
 }
-/* line 38, ../../../components/sass/modules/footer.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 50, ../../../components/sass/modules/footer.scss */
+  .footer__top-social {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 70px;
+  }
+}
+/* line 63, ../../../components/sass/modules/footer.scss */
 .footer__top-social .footer__top-header:after {
+  content: "";
+  position: absolute;
   left: 45%;
 }
 
-/* line 43, ../../../components/sass/modules/footer.scss */
+/* line 70, ../../../components/sass/modules/footer.scss */
 .social__list {
   padding-top: 20px;
   text-align: center;
 }
-/* line 46, ../../../components/sass/modules/footer.scss */
+/* line 73, ../../../components/sass/modules/footer.scss */
 .social__list .social__list-item {
   list-style: none;
   display: inline-block;
@@ -1592,7 +1694,7 @@ p {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 53, ../../../components/sass/modules/footer.scss */
+/* line 80, ../../../components/sass/modules/footer.scss */
 .social__list .social__list-item:hover {
   -moz-transform: rotate(10deg);
   -o-transform: rotate(10deg);
@@ -1600,11 +1702,11 @@ p {
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
 }
-/* line 56, ../../../components/sass/modules/footer.scss */
+/* line 83, ../../../components/sass/modules/footer.scss */
 .social__list .social__list-item:last-child {
   margin-right: 0;
 }
-/* line 59, ../../../components/sass/modules/footer.scss */
+/* line 86, ../../../components/sass/modules/footer.scss */
 .social__list .social__list-item .social__list-link {
   display: block;
   height: 100%;
@@ -1612,28 +1714,28 @@ p {
   text-indent: -9999px;
 }
 
-/* line 73, ../../../components/sass/modules/footer.scss */
+/* line 100, ../../../components/sass/modules/footer.scss */
 .social__list-link.instagram {
   background: url('../images/socials-s9b860b8685.png') 0 -96px no-repeat;
   height: 26px;
   width: 26px;
 }
 
-/* line 73, ../../../components/sass/modules/footer.scss */
+/* line 100, ../../../components/sass/modules/footer.scss */
 .social__list-link.twitter {
   background: url('../images/socials-s9b860b8685.png') 0 -192px no-repeat;
   height: 22px;
   width: 26px;
 }
 
-/* line 73, ../../../components/sass/modules/footer.scss */
+/* line 100, ../../../components/sass/modules/footer.scss */
 .social__list-link.facebook {
   background: url('../images/socials-s9b860b8685.png') 0 0 no-repeat;
   height: 26px;
   width: 12px;
 }
 
-/* line 78, ../../../components/sass/modules/footer.scss */
+/* line 105, ../../../components/sass/modules/footer.scss */
 .footer__top-address {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1645,13 +1747,31 @@ p {
   max-width: 230px;
   text-align: right;
   float: right;
+  position: relative;
 }
-/* line 84, ../../../components/sass/modules/footer.scss */
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 105, ../../../components/sass/modules/footer.scss */
+  .footer__top-address {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+/* line 118, ../../../components/sass/modules/footer.scss */
 .footer__top-address .footer__top-header:after {
+  content: "";
   right: 0;
+  position: absolute;
+}
+@media (min-width: 0) and (max-width: 650px) {
+  /* line 118, ../../../components/sass/modules/footer.scss */
+  .footer__top-address .footer__top-header:after {
+    right: 45%;
+  }
 }
 
-/* line 89, ../../../components/sass/modules/footer.scss */
+/* line 128, ../../../components/sass/modules/footer.scss */
 .footer__top-header {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -1661,7 +1781,7 @@ p {
   position: relative;
   letter-spacing: 1px;
 }
-/* line 97, ../../../components/sass/modules/footer.scss */
+/* line 136, ../../../components/sass/modules/footer.scss */
 .footer__top-header:after {
   width: 31px;
   height: 6px;
@@ -1672,19 +1792,19 @@ p {
   background-repeat: no-repeat;
 }
 
-/* line 107, ../../../components/sass/modules/footer.scss */
+/* line 146, ../../../components/sass/modules/footer.scss */
 .footer__top-text {
   font-size: 1.4rem;
   letter-spacing: 1px;
   padding-top: 20px;
 }
 
-/* line 112, ../../../components/sass/modules/footer.scss */
+/* line 151, ../../../components/sass/modules/footer.scss */
 .footer__bottom {
   background-color: #1e292f;
   border-bottom: 2px solid #ff8207;
 }
-/* line 115, ../../../components/sass/modules/footer.scss */
+/* line 154, ../../../components/sass/modules/footer.scss */
 .footer__bottom .footer__bottom-text {
   text-align: center;
   padding: 20px 0;

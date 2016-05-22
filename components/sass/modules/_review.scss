@@ -141,6 +141,9 @@
   .bx-wrapper .bx-prev {
     left: 20px;
     background: url(../images/controls/reviewLeftArrow.png) 0 0 no-repeat;//changed from url('images/controls.png') no-repeat 0 -32px
+    @include breakpoint(0 $small){
+      left: 0;
+    }
   }
   .bx-wrapper .bx-prev:hover,
   .bx-wrapper .bx-prev:focus {
@@ -149,6 +152,9 @@
   .bx-wrapper .bx-next {
     right: 20px;
     background: url(../images/controls/reviewRightArrow.png) 0 0 no-repeat;//changed from url('images/controls.png') no-repeat -43px -32px
+    @include breakpoint(0 $small){
+      right: 0;
+    }
   }
   // .bx-wrapper .bx-next:hover,
   // .bx-wrapper .bx-next:focus {

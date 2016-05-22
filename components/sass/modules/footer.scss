@@ -8,9 +8,20 @@
   background-size: cover;
   padding-top: 55px;
   padding-bottom: 74px;
+  @include breakpoint(0 $small){
+    @include display-flex;
+    @include flex-direction(column);
+  }
 }
 .footer__top-logo{
   @include span(4 of 12);
+  @include breakpoint(0 $small){
+    float:none;
+    width:100%;
+    text-align: center;
+    margin:0 auto;
+    padding-bottom: 70px;
+  }
   float:left;
   text-align: left;
   .wrapper-img{
@@ -24,18 +35,34 @@
       left: 0;
       background-image: url("../images/separator.png");
       background-repeat: no-repeat;
+      @include breakpoint(0 $small){
+        left: 45%;
+      }
     }
   }
   .footer__top-img{
     padding-bottom: 40px;
+    @include breakpoint(0 $small){
+      margin-left: 14.6%;
+    }
   }
 }
 .footer__top-social{
   @include span(4 of 12);
+  @include breakpoint(0 $small){
+    float:none;
+    width:100%;
+    text-align: center;
+    margin:0 auto;
+    padding-bottom:70px;
+  }
   float:left;
   text-align: center;
+  position:relative;
   .footer__top-header{
     &:after{
+      content:"";
+      position:absolute;
       left:45%;
     }
   }
@@ -77,12 +104,24 @@ $socials-map: sprite-map('socials/*.png', $spacing: 70px);
 
 .footer__top-address{
   @include span(4 of 12);
+  @include breakpoint(0 $small){
+    float:none;
+    width:100%;
+    text-align: center;
+    margin:0 auto;
+  }
   max-width:230px;
   text-align:right;
   float:right;
+  position:relative;
   .footer__top-header{
     &:after{
+      content:"";
       right:0;
+      position:absolute;
+      @include breakpoint(0 $small){
+        right:45%;
+      }
     }
   }
 }

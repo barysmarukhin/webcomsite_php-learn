@@ -193,16 +193,22 @@
   }
   /* DIRECTION CONTROLS (NEXT / PREV) */
   .bx-wrapper .bx-prev {
-    left: 20px;
+    left: 0;
     background: url(../images/controls/sliderLeftArrow.png) 0 0 no-repeat;//changed from url('images/controls.png') no-repeat 0 -32px
+    @include breakpoint(0 $small){
+      left: 0;
+    }
   }
   .bx-wrapper .bx-prev:hover,
   .bx-wrapper .bx-prev:focus {
     background-position: 0 0;
   }
   .bx-wrapper .bx-next {
-    right: 20px;
+    right: 0;
     background: url(../images/controls/sliderRightArrow.png) 0 0 no-repeat;//changed from url('images/controls.png') no-repeat -43px -32px
+      @include breakpoint(0 $small){
+      right: 0;
+    }
   }
   // .bx-wrapper .bx-next:hover,
   // .bx-wrapper .bx-next:focus {
@@ -279,201 +285,3 @@
     padding: 10px;
   }
 }
-
-/* MARQUEE STYLES */
-// .marquee {
-//     font-size: 1em;
-//     height: 1000px;
-//     max-width: 1400px;
-//     margin: 0px auto;
-//     border: 1px solid #ccc;
-// }
-
-// .marquee .marquee_data {
-//     display: none;
-// }
-
-// .marquee .marquee_stage_large{
-//     height: inherit;
-//     position: relative;
-//     overflow: hidden;
-// }
-
-// .marquee .marquee_container_1,
-// .marquee .marquee_container_2{
-//     height: inherit;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-// }
-
-// .marquee .marquee_container_1{
-//     z-index: 11;
-// }
-
-// .marquee .marquee_container_2{
-//     z-index: 12;
-// }
-
-// .marquee .marquee_panel{
-//     @include border-radius(5px);
-//     height: inherit;
-//     width: 100%;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     text-align: center;
-//     background-repeat: no-repeat;
-//     background-position: center 0;
-//     background-size: cover;
-// }
-
-// .marquee .marquee_panel .panel_caption{
-//     width: 68%;
-//     position: absolute;
-//     bottom: 35px;
-//     left: 0;
-//     margin-left: 16%;
-//     font-family: $mainFont;
-//     padding-bottom: 15px;
-// }
-
-// .marquee .marquee_panel .panel_caption h3 { text-transform: uppercase; font-family: $mainFont; margin: 0px 0px 0px 0px; font-weight: $bold; font-size: .9em; color:#fff; }
-// .marquee .marquee_panel .panel_caption p { margin: 0px 50px 15px 50px; color: #888; font-size: 1.3em; color: rgba(255,255,255,.75); }
-// .marquee .marquee_panel .panel_caption a.cta { display: inline-block; background-color: rgba(255,255,255,0); text-transform: uppercase; color:#fff; font-size: .8em; padding: 6px 20px; transition: background-color .7s, border .7s; border: 1px solid rgba(255,255,255,.5); border-radius: 5px; text-decoration: none; }
-// .marquee .marquee_panel .panel_caption a:hover { background-color: rgba(255,255,255,.6); color:#000; border-color: rgba(255,255,255,0); }
-
-// .marquee .overlay{
-//     @include border-radius(5px);
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-image: linear-gradient(rgba(0,0,0,0) 45%, rgba(0,0,0,.7) 70%);
-//     background-size: 100%;
-// }
-
-// .marquee .marquee_nav{
-//     position: absolute;
-//     bottom: 10px;
-//     left: 0;
-//     text-align: center;
-//     width: 100%;
-//     z-index: 13;
-// }
-
-// .marquee .marquee_nav div{
-//     display: inline-block;
-//     width: 10px;
-//     height: 10px;
-//     border: 2px solid rgba(255,255,255,.5);
-//     border-radius: 50%;
-//     margin: 0 8px 0 8px;
-//     cursor: pointer;
-//     transition: background-color 4s, border .4s;
-// }
-
-// .marquee .marquee_nav div:hover{
-//     border-color: #fff;
-//     background-color: rgba(255,255,255,.2);
-// }
-
-// .marquee .marquee_nav div.selected{
-//     background-color: #fff;
-// }
-
-// .marquee .btn {
-//     width: 39px;
-//     height: 39px;
-//     background: rgba(255,255,255,.2) no-repeat;
-//     background-size: 50px 30px;
-//     position: absolute;
-//     top: 192px;
-//     cursor: pointer;
-//     border-radius: 50%;
-//     border: 2px solid rgba(255,255,255,.5);
-//     transition: background-color .4s, border .4s;
-// }
-
-// .marquee .btn:hover{
-//     border-color: #fff;
-//     background-color: rgba(0,0,0,.6);
-// }
-
-// .marquee .btn.prev{
-//     left: 20px;z-index: 14;
-//     background-image: url(../images/marquee/arrow_left.svg);
-//     background-position: -8px 4px;
-// }
-
-// .marquee .btn.next{
-//     right: 20px;
-//     z-index: 15;
-//     background-image: url(../images/marquee/arrow_right.svg);
-//     background-position: -3px 4px;
-// }
-
-// .marquee .marquee_stage_small {
-//     height: inherit;
-//     position: relative;
-//     overflow: hidden;
-// }
-
-// .marquee .marquee_stage_small .marquee_panel{
-//     width: 100%;
-//     height: inherit;
-//     position: absolute;
-//     top: 0px;
-//     left: 0px;
-// }
-
-// @media screen and (max-width: 800px) {
-//     .marquee{
-//         font-size: 1em;
-//         height: 325px;
-//         background-color: #444;
-//     }
-//     .marquee .btn{
-//         width: 29px;
-//         height: 29px;
-//         background-size: 33px 20px;
-//         top: 140px;
-//     }
-//     .marquee .btn.prev{
-//         background-position: -4px 4px;
-//     }
-//     .marquee .btn.next{
-//         background-position: -1px 4px;
-//     }
-//     .marquee .marquee_panel .panel_caption{
-//         width: 80%;
-//         margin-left: 10%;
-//     }
-//     .marquee .marquee_panel .panel_caption a.cta{
-//         margin-top: 10px;
-//         padding: 4px 20px;
-//     }
-//     .marquee .marquee_nav div{
-//         width: 13px;
-//         height: 13px;
-//         margin: 0px 12px 0px 12px;
-//     }
-// }
-
-// @media screen and (max-width: 600px) {
-//     .marquee {
-//         height: 250px;
-//     }
-//     .marquee .marquee_panel .marquee_caption{
-//         margin: 0;
-//         padding: 10px 10px 20px 10px;
-//         width: 100%;
-//         bottom: 0;
-//         background-color: rgba(0,0,0,.65);
-//     }
-//     .marquee .marquee_panel .panel_caption a.cta{
-//         padding: 8px 30px;
-//     }
-// }
