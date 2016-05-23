@@ -63,7 +63,7 @@
           <p class="header__phones-number">+375 (33) 123-45-67</p>
         </div>
       </nav>
-      <nav id="scrollnav" class="scrollnav container">
+      <nav id="scrollnav" class="scrollnav displaynone container">
         <a href="index.html" class="header__logo scrollLogo">
           <img src="images/logo.png" alt="Webcom-media logo">
         </a>
@@ -90,7 +90,7 @@
             <a href="/" class="requestLink">Оставить заявку</a>
           </li> -->
         </ul>
-          <a href="#" class="requestLink">Оставить заявку</a>
+          <a href="#" id="callback" class="requestLink">Оставить заявку</a>
       </nav>
       <nav id="mobilenav" class="mobilenav container"><span class="mobile-trigger"></span>
         <div class="mobilenav__wrapper">
@@ -119,35 +119,35 @@
               <div class="maingallery__list-container">
                 <h1 class="maingallery__header">Главный заголовок</h1>
                 <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
-                <a href="#" class="maingallery__link">Оформить заявку</a>
+                <a href="#" id="callback" class="maingallery__link">Оформить заявку</a>
               </div>
             </li>
             <li class="maingallery__list-item">
               <div class="maingallery__list-container">
                 <h1 class="maingallery__header">Второй заголовок</h1>
                 <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
-                <a href="#" class="maingallery__link">Оформить заявку</a>
+                <a href="#" id="callback" class="maingallery__link">Оформить заявку</a>
               </div>
             </li>
             <li class="maingallery__list-item">
               <div class="maingallery__list-container">
                 <h1 class="maingallery__header">Третий заголовок</h1>
                 <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
-                <a href="#" class="maingallery__link">Оформить заявку</a>
+                <a href="#" id="callback" class="maingallery__link">Оформить заявку</a>
               </div>
             </li>
             <li class="maingallery__list-item">
               <div class="maingallery__list-container">
                 <h1 class="maingallery__header">Четвертый заголовок</h1>
                 <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
-                <a href="#" class="maingallery__link">Оформить заявку</a>
+                <a href="#" id="callback" class="maingallery__link">Оформить заявку</a>
               </div>
             </li>
             <li class="maingallery__list-item">
               <div class="maingallery__list-container">
                 <h1 class="maingallery__header">Пятый заголовок</h1>
                 <p class="maingallery_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.</p>
-                <a href="#" class="maingallery__link">Оформить заявку</a>
+                <a href="#" id="callback" class="maingallery__link">Оформить заявку</a>
               </div>
             </li>
           </ul>
@@ -473,6 +473,16 @@
       </arcticle>
     </div>
   </footer>
+  <div class="modal-content">
+    <div class="modal-content-close" title="Закрыть">Закрыть</div>
+    <h2 class="modal-content-title">Обратный звонок</h2>
+    <p>Введите пожалуйста свое имя и номер телефона.</p>
+    <form class="login-form" action="/echo" method="post">
+      <input type="text" class="input name" name="login" placeholder="Ваше имя" required>
+      <input type="text" class="input number" name="number" placeholder="Ваш номер телефона" required>
+      <button type="submit" class="btn">Жду звонка!</button>
+    </form>
+  </div><!--modal-content-->
   <script src="js/script.js"></script>
 </body>
 </html>

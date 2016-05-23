@@ -120,7 +120,7 @@ $socials-map: sprite-map('socials/*.png', $spacing: 70px);
       right:0;
       position:absolute;
       @include breakpoint(0 $small){
-        right:45%;
+        left:45%;
       }
     }
   }

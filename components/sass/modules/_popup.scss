@@ -1,0 +1,198 @@
+/* Всплывающая форма */
+.modal-content {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  display: none;
+  z-index:100;
+  min-width: 300px;
+  width:40%;
+  padding: 25px 40px;
+  color: black;
+  background: #f8f3f0 url("img/pattern-white.jpg");
+  box-shadow: 15px 15px 15px 15px rgba(0,0,0,.8);
+  @include breakpoint($narrow $small){
+    width:60%;
+    left:20%;
+  }
+  @include breakpoint(0 $narrow){
+    width:100%;
+    left:0;
+  }
+
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-content-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  cursor: pointer;
+  background: url("../images/close.svg") no-repeat center;
+  background-size: 40px 40px;
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  padding-right: 40px;
+
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #000;
+  border: 2px solid #000;
+  outline: none;
+  background: #f9f6f3;
+}
+
+.login-form input:focus {
+/*  border-color: #663d15;*/
+  border-color: red;
+}
+
+.login-form .restore {
+  float: right;
+  color: #000;
+}
+
+.login-form .btn {
+  margin-top: 15px;
+  @include border-radius(5px);
+  background-color: $red;
+  @include box-shadow(1px 1px 1px 1px $darkgray);
+  outline: none;
+  border:none;
+  text-transform: uppercase;
+  font-weight:$bold;
+  width: 100%;
+  height: 32px;
+  color: $light;
+  padding: 0px 20px;
+  display:block;
+  cursor:pointer;
+}
+
+.login-form input[type="checkbox"] {
+  display: none;
+}
+
+.login-form input[type="checkbox"] + label {
+  position: relative;
+
+  display: inline-block;
+  padding-left: 30px;
+
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.login-form input[type="checkbox"] + label:hover {
+  color: #663d15;
+}
+
+.login-form input[type="checkbox"] + label::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000;
+}
+
+.login-form input[type="checkbox"]:checked + label::before {
+  background: url("img/sprite.png") no-repeat;
+  background-position: -1px -1px;
+}

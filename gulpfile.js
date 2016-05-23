@@ -30,6 +30,7 @@ jsSources = [
   'components/scripts/jqloader.js',
   'components/scripts/jquery.bxslider.min.js',
   'components/scripts/scroll_module.js',
+  'components/scripts/popup_handler.js',
   'components/scripts/script.js'
 ];
 sassSources = ['components/sass/style.scss'];

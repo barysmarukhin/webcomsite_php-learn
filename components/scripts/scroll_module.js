@@ -30,7 +30,7 @@ var Scroll = (function(){
     };
   };
 
-//Сворачивание или разворачивание навигации при клике
+//Сворачивание или разворачивание мобильной навигации при клике
   var _headerMobileToggle = function(e){
     e.preventDefault();
     $('.mobilenav__list').toggleClass("displayblock");

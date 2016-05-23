@@ -1,5 +1,6 @@
 .sendreview{
   background-color: $light;
+  padding:30px 0;
 }
 .sendreview .container{
   max-width:980px;
@@ -141,6 +142,7 @@
   margin-top:30px;
 }
 .sendreview__sendform-submit{
+  cursor:pointer;
   margin-top:90px;
   float:left;
   color:$light;
