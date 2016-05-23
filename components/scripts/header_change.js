@@ -1,4 +1,4 @@
-var Scroll = (function(){
+var HeaderChange = (function(){
 
 //Инициализирует наш модуль
   var init = function(){
@@ -27,7 +27,7 @@ var Scroll = (function(){
       header.removeClass("fixed");
       mainnav.removeClass("displaynone");
       mainGallery.removeClass("marginGallery");
-    };
+    }
   };
 
 //Сворачивание или разворачивание мобильной навигации при клике
@@ -42,4 +42,4 @@ var Scroll = (function(){
     init:init,
   };
 })();
-Scroll.init();
+HeaderChange.init();

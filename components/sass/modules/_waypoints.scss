@@ -7,20 +7,19 @@
     z-index: 300;
 }
 
-.nav_right li {
+.nav_right__item {
     height: 18px;
     width: 18px;
-    background: #d6dee1;
-    border-radius: 50%;
+    background: #d6dee1;  
     margin-bottom: 9.5px;
+    border-radius: 50%;
+    
 }
-
-.nav_right li a {
+.activve{
+    background: $orange;
+}
+.nav_right__link {
     display: block;
     height: 100%;
-    width: 100%;
-}
-
-.nav_right li.activve {
-    background: #c1ee01;
+    width: 100%; 
 }

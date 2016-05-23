@@ -29,7 +29,10 @@ if (env==='development') {
 jsSources = [
   'components/scripts/jqloader.js',
   'components/scripts/jquery.bxslider.min.js',
-  'components/scripts/scroll_module.js',
+  'components/scripts/scrollnav.js',
+  'components/scripts/TweenMax.min.js',
+  'components/scripts/jquery.scrollmagic.min.js',
+  'components/scripts/header_change.js',
   'components/scripts/popup_handler.js',
   'components/scripts/script.js'
 ];

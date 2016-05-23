@@ -173,24 +173,24 @@ p {
 }
 
 /* line 10, ../../../components/sass/modules/_waypoints.scss */
-.nav_right li {
+.nav_right__item {
   height: 18px;
   width: 18px;
   background: #d6dee1;
-  border-radius: 50%;
   margin-bottom: 9.5px;
+  border-radius: 50%;
 }
 
 /* line 18, ../../../components/sass/modules/_waypoints.scss */
-.nav_right li a {
+.activve {
+  background: #ff8207;
+}
+
+/* line 21, ../../../components/sass/modules/_waypoints.scss */
+.nav_right__link {
   display: block;
   height: 100%;
   width: 100%;
-}
-
-/* line 24, ../../../components/sass/modules/_waypoints.scss */
-.nav_right li.activve {
-  background: #c1ee01;
 }
 
 /* line 1, ../../../components/sass/modules/_header.scss */
