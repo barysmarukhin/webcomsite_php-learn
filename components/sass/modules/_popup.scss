@@ -8,8 +8,8 @@
   min-width: 300px;
   width:40%;
   padding: 25px 40px;
-  color: black;
-  background: #f8f3f0 url("img/pattern-white.jpg");
+  color: $darkgray;
+  background: #f8f3f0;
   box-shadow: 15px 15px 15px 15px rgba(0,0,0,.8);
   @include breakpoint($narrow $small){
     width:60%;
@@ -102,8 +102,10 @@
 .modal-content h2 {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 2.4rem;
+  font-weight: $bold;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .modal-content p {
@@ -123,14 +125,12 @@
   margin-bottom: 10px;
   padding: 10px 20px;
   padding-right: 40px;
-
-  font-family: "PT Sans Narrow", sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
 
-  color: #000;
-  border: 2px solid #000;
+  color: $darkgray;
+  border: 2px solid $darkgray;
   outline: none;
   background: #f9f6f3;
 }
@@ -142,7 +142,7 @@
 
 .login-form .restore {
   float: right;
-  color: #000;
+  color: $darkgray;
 }
 
 .login-form .btn {
@@ -177,7 +177,7 @@
 }
 
 .login-form input[type="checkbox"] + label:hover {
-  color: #663d15;
+  color: $lightgray;
 }
 
 .login-form input[type="checkbox"] + label::before {
@@ -189,7 +189,7 @@
 
   width: 17px;
   height: 17px;
-  border: 2px solid #000;
+  border: 2px solid $darkgray;
 }
 
 .login-form input[type="checkbox"]:checked + label::before {

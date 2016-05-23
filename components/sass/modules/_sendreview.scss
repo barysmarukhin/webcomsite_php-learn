@@ -1,9 +1,10 @@
 .sendreview{
   background-color: $light;
   padding:30px 0;
+  position:relative;
 }
 .sendreview .container{
-  max-width:980px;
+  max-width:1200px;
 }
 .sendreview__header{
   @extend .about__header;
@@ -13,7 +14,7 @@
 }
 .sendreview__contacts{
   @include span(5);
-  @include breakpoint(0 $medium){
+  @include breakpoint(0 1150px){
     float:none;
     width:100%;
   }
@@ -35,7 +36,7 @@
 .sendreview__sendform{
   float:right;
   @include span(7 at 5 of 12);
-  @include breakpoint(0 $medium){
+  @include breakpoint(0 1150px){
     float:none;
     width:100%;
     h3{
@@ -129,10 +130,15 @@
 .sendreview__sendform-capcha{
   @include clearfix;
   position: relative;
-  .sendreview__sendform-label{
+  .sendreview__sendorm-container_capcha{
     float:left;
     min-width:300px;
     width:50%;
+  }
+  .sendreview__sendform-label{
+    //float:left;
+    //min-width:300px;
+    width:100%;
   }
 }
 .sendreview__sendform-picture{
@@ -141,10 +147,14 @@
   height:41px;
   margin-top:30px;
 }
+.sendreview__sendform-container_submit{
+  width:292px;
+  float:left;
+}
 .sendreview__sendform-submit{
   cursor:pointer;
   margin-top:90px;
-  float:left;
+  //float:left;
   color:$light;
   text-transform: uppercase;
   width:220px;  
@@ -156,10 +166,20 @@
   font-size: 1.8rem;
   border:0;
   outline:0;
-  @include breakpoint($small $medium){
-    float:right;
-  }
-  @include breakpoint(0 $small){
-    float:left;
-  }
+  // @include breakpoint($small $medium){
+  //   float:right;
+  // }
+  // @include breakpoint(0 $small){
+  //   float:left;
+  // }
+}
+.sendreview__scrolltop{
+  width:60px;
+  height:60px;
+  text-indent:-9999px;
+  background: url(../images/scrollTop.png) 0 0 no-repeat;
+  bottom:10px;
+  right: 5%;
+  display:inline-block;
+  position:absolute;
 }

@@ -1331,14 +1331,15 @@ p {
 .sendreview {
   background-color: #FFFFFF;
   padding: 30px 0;
+  position: relative;
 }
 
-/* line 5, ../../../components/sass/modules/_sendreview.scss */
+/* line 6, ../../../components/sass/modules/_sendreview.scss */
 .sendreview .container {
-  max-width: 980px;
+  max-width: 1200px;
 }
 
-/* line 14, ../../../components/sass/modules/_sendreview.scss */
+/* line 15, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__contacts {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1349,14 +1350,14 @@ p {
   padding-right: 0.83333%;
   float: left;
 }
-@media (min-width: 0) and (max-width: 960px) {
-  /* line 14, ../../../components/sass/modules/_sendreview.scss */
+@media (min-width: 0) and (max-width: 1150px) {
+  /* line 15, ../../../components/sass/modules/_sendreview.scss */
   .sendreview__contacts {
     float: none;
     width: 100%;
   }
 }
-/* line 21, ../../../components/sass/modules/_sendreview.scss */
+/* line 22, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__contacts .sendreview__contacts-header {
   color: #ff8207;
   font-size: 2.4rem;
@@ -1364,7 +1365,7 @@ p {
   text-transform: uppercase;
   font-weight: 800;
 }
-/* line 28, ../../../components/sass/modules/_sendreview.scss */
+/* line 29, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__contacts .senreview__contacts-text {
   font-size: 1.6rem;
   line-height: 1.2;
@@ -1372,7 +1373,7 @@ p {
   font-weight: 400;
 }
 
-/* line 35, ../../../components/sass/modules/_sendreview.scss */
+/* line 36, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform {
   float: right;
   -moz-box-sizing: border-box;
@@ -1383,23 +1384,23 @@ p {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-@media (min-width: 0) and (max-width: 960px) {
-  /* line 35, ../../../components/sass/modules/_sendreview.scss */
+@media (min-width: 0) and (max-width: 1150px) {
+  /* line 36, ../../../components/sass/modules/_sendreview.scss */
   .sendreview__sendform {
     float: none;
     width: 100%;
   }
-  /* line 41, ../../../components/sass/modules/_sendreview.scss */
+  /* line 42, ../../../components/sass/modules/_sendreview.scss */
   .sendreview__sendform h3 {
     text-align: center;
   }
-  /* line 44, ../../../components/sass/modules/_sendreview.scss */
+  /* line 45, ../../../components/sass/modules/_sendreview.scss */
   .sendreview__sendform .sendreview__sendform-capcha h3 {
     text-align: left;
   }
 }
 
-/* line 49, ../../../components/sass/modules/_sendreview.scss */
+/* line 50, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-header {
   color: #1e292f;
   font-size: 2.4rem;
@@ -1409,14 +1410,14 @@ p {
   line-height: 1;
 }
 
-/* line 57, ../../../components/sass/modules/_sendreview.scss */
+/* line 58, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-input, .sendreview__sendform-textarea {
   width: 100%;
   font-style: italic;
   text-indent: 2px;
 }
 
-/* line 62, ../../../components/sass/modules/_sendreview.scss */
+/* line 63, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-input {
   border-left: none;
   border-right: none;
@@ -1429,7 +1430,7 @@ p {
   line-height: 21px;
 }
 
-/* line 73, ../../../components/sass/modules/_sendreview.scss */
+/* line 74, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-textarea {
   font-weight: 200;
   resize: none;
@@ -1442,26 +1443,26 @@ p {
   margin-bottom: 30px;
 }
 
-/* line 85, ../../../components/sass/modules/_sendreview.scss */
+/* line 86, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-input::-webkit-input-placeholder {
   color: #8198a0;
   /* ╨ж╨▓╨╡╤В ╨┐╨╛╨┤╤Б╨║╨░╨╖╤Л╨▓╨░╤О╤Й╨╡╨│╨╛ ╤В╨╡╨║╤Б╤В╨░ */
 }
 
-/* line 88, ../../../components/sass/modules/_sendreview.scss */
+/* line 89, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-textarea::-webkit-input-placeholder {
   color: #8198a0;
   /* ╨ж╨▓╨╡╤В ╨┐╨╛╨┤╤Б╨║╨░╨╖╤Л╨▓╨░╤О╤Й╨╡╨│╨╛ ╤В╨╡╨║╤Б╤В╨░ */
 }
 
-/* line 91, ../../../components/sass/modules/_sendreview.scss */
+/* line 92, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-addphoto {
   position: relative;
   height: 60px;
   margin-bottom: 10px;
 }
 
-/* line 96, ../../../components/sass/modules/_sendreview.scss */
+/* line 97, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-uploadlabel {
   cursor: pointer;
   position: absolute;
@@ -1484,19 +1485,19 @@ p {
   background-clip: padding-box;
 }
 
-/* line 112, ../../../components/sass/modules/_sendreview.scss */
+/* line 113, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-fileupload {
   position: absolute;
   top: 0;
   left: -9999px;
 }
 
-/* line 117, ../../../components/sass/modules/_sendreview.scss */
+/* line 118, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-filename {
   display: none;
 }
 
-/* line 120, ../../../components/sass/modules/_sendreview.scss */
+/* line 121, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-span {
   margin-left: 60px;
   line-height: 60px;
@@ -1507,7 +1508,7 @@ p {
   font-weight: 800;
 }
 
-/* line 129, ../../../components/sass/modules/_sendreview.scss */
+/* line 130, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-capcha {
   position: relative;
 }
@@ -1520,14 +1521,18 @@ p {
 .sendreview__sendform-capcha:after {
   clear: both;
 }
-/* line 132, ../../../components/sass/modules/_sendreview.scss */
-.sendreview__sendform-capcha .sendreview__sendform-label {
+/* line 133, ../../../components/sass/modules/_sendreview.scss */
+.sendreview__sendform-capcha .sendreview__sendorm-container_capcha {
   float: left;
   min-width: 300px;
   width: 50%;
 }
-
 /* line 138, ../../../components/sass/modules/_sendreview.scss */
+.sendreview__sendform-capcha .sendreview__sendform-label {
+  width: 100%;
+}
+
+/* line 144, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-picture {
   background: url(../images/capcha.jpg) 0 0 no-repeat;
   width: 137px;
@@ -1535,11 +1540,16 @@ p {
   margin-top: 30px;
 }
 
-/* line 144, ../../../components/sass/modules/_sendreview.scss */
+/* line 150, ../../../components/sass/modules/_sendreview.scss */
+.sendreview__sendform-container_submit {
+  width: 292px;
+  float: left;
+}
+
+/* line 154, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-submit {
   cursor: pointer;
   margin-top: 90px;
-  float: left;
   color: #FFFFFF;
   text-transform: uppercase;
   width: 220px;
@@ -1557,17 +1567,17 @@ p {
   border: 0;
   outline: 0;
 }
-@media (min-width: 650px) and (max-width: 960px) {
-  /* line 144, ../../../components/sass/modules/_sendreview.scss */
-  .sendreview__sendform-submit {
-    float: right;
-  }
-}
-@media (min-width: 0) and (max-width: 650px) {
-  /* line 144, ../../../components/sass/modules/_sendreview.scss */
-  .sendreview__sendform-submit {
-    float: left;
-  }
+
+/* line 176, ../../../components/sass/modules/_sendreview.scss */
+.sendreview__scrolltop {
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  background: url(../images/scrollTop.png) 0 0 no-repeat;
+  bottom: 10px;
+  right: 5%;
+  display: inline-block;
+  position: absolute;
 }
 
 /* line 1, ../../../components/sass/modules/footer.scss */
@@ -1826,8 +1836,8 @@ p {
   min-width: 300px;
   width: 40%;
   padding: 25px 40px;
-  color: black;
-  background: #f8f3f0 url("img/pattern-white.jpg");
+  color: #1e292f;
+  background: #f8f3f0;
   box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.8);
 }
 @media (min-width: 400px) and (max-width: 650px) {
@@ -1925,23 +1935,25 @@ p {
 .modal-content h2 {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-/* line 109, ../../../components/sass/modules/_popup.scss */
+/* line 111, ../../../components/sass/modules/_popup.scss */
 .modal-content p {
   margin: 0;
   margin-bottom: 14px;
 }
 
-/* line 114, ../../../components/sass/modules/_popup.scss */
+/* line 116, ../../../components/sass/modules/_popup.scss */
 .modal-content .login-form {
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-/* line 119, ../../../components/sass/modules/_popup.scss */
+/* line 121, ../../../components/sass/modules/_popup.scss */
 .login-form input[type="text"],
 .login-form input[type="password"] {
   width: 100%;
@@ -1949,12 +1961,11 @@ p {
   margin-bottom: 10px;
   padding: 10px 20px;
   padding-right: 40px;
-  font-family: "PT Sans Narrow", sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #000;
-  border: 2px solid #000;
+  color: #1e292f;
+  border: 2px solid #1e292f;
   outline: none;
   background: #f9f6f3;
 }
@@ -1968,7 +1979,7 @@ p {
 /* line 143, ../../../components/sass/modules/_popup.scss */
 .login-form .restore {
   float: right;
-  color: #000;
+  color: #1e292f;
 }
 
 /* line 148, ../../../components/sass/modules/_popup.scss */
@@ -2012,7 +2023,7 @@ p {
 
 /* line 179, ../../../components/sass/modules/_popup.scss */
 .login-form input[type="checkbox"] + label:hover {
-  color: #663d15;
+  color: #28363d;
 }
 
 /* line 183, ../../../components/sass/modules/_popup.scss */
@@ -2023,7 +2034,7 @@ p {
   left: 0;
   width: 17px;
   height: 17px;
-  border: 2px solid #000;
+  border: 2px solid #1e292f;
 }
 
 /* line 195, ../../../components/sass/modules/_popup.scss */
