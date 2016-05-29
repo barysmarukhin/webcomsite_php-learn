@@ -21,14 +21,14 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('header nav li a').removeClass('active');
     $('.nav_right__item').removeClass('activve');
-    $('.scrolltop').addClass('displaynone');
-    $('.nav_right').addClass('displaynone');    
+    $('.scrolltop').addClass('displaynone');  
 
     if (windowpos >= $('#maingallery').offset().top){
       $('header nav li a').removeClass('active');
       $('.nav_right__item').removeClass('activve');
       $('header a[href$="#maingallery"]').addClass('active');
       $('.maingallery__item').addClass('activve');
+      $('.nav_right').addClass('displaynone');  
     }//windowpos
 
     if (windowpos >= $('#about').offset().top){

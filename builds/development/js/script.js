@@ -34,14 +34,14 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('header nav li a').removeClass('active');
     $('.nav_right__item').removeClass('activve');
-    $('.scrolltop').addClass('displaynone');
-    $('.nav_right').addClass('displaynone');    
+    $('.scrolltop').addClass('displaynone');  
 
     if (windowpos >= $('#maingallery').offset().top){
       $('header nav li a').removeClass('active');
       $('.nav_right__item').removeClass('activve');
       $('header a[href$="#maingallery"]').addClass('active');
       $('.maingallery__item').addClass('activve');
+      $('.nav_right').addClass('displaynone');  
     }//windowpos
 
     if (windowpos >= $('#about').offset().top){
@@ -136,7 +136,6 @@ var HeaderChange = (function(){
 HeaderChange.init();
 (function (){ 
       var callback_link = document.querySelectorAll("#callback");
-      //var order_link = document.querySelector("#order");
       var popup = document.querySelector(".modal-content");
       var close = document.querySelector(".modal-content-close");
       var form = popup.querySelector(".login-form");
@@ -144,9 +143,7 @@ HeaderChange.init();
       var password = popup.querySelector("[name=number]");
       var storage = localStorage.getItem("login");
 
-      // for(var i = 0; i < callback_link.lenght; i++){
-          
-      // }
+
        for(var i = callback_link.length - 1; i >= 0; i--){
           callback_link[i].addEventListener("click", function(event) {
             event.preventDefault();
@@ -160,17 +157,6 @@ HeaderChange.init();
           });
         };
       
-      // order_link.addEventListener("click", function(event) {
-      //   event.preventDefault();
-      //   popup.classList.add("modal-content-show");
-      //   if (storage) {
-      //     login.value = storage;
-      //     password.focus();
-      //   } else {
-      //     login.focus();
-      //   }
-      // });
-
       close.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.remove("modal-content-show");
@@ -204,51 +190,6 @@ $(document).ready(function(){
     pager: false
   });
 });
-
-
-// $(function() {
-//     var navLi = $('.nav_right li');
-//     var mainNav = $('a.nav');
-//     $('.tracked').waypoint(function () {
-//         var hash = $(this).attr('id');
-//         var activeItem = $(this).attr('data-link');
-//         navLi.removeClass('activve');
-//         mainNav.removeClass('active');
-//         $.each(navLi, function () {
-//             if ($(this).children('a').attr('href').slice(1) == hash) {
-//                 $(this).addClass('activve');
-
-//             }
-//         });
-//         $.each(mainNav, function () {
-//             if ($(this).attr('data-link') == activeItem) {
-//                 $(this).addClass('active');
-
-//             }
-
-//         });
-//     }, {offset: '30%'});
-
-//     $('a.nav').click(function() {
-
-//         var sizeScrollHeader = 80;
-
-//         var scrolling = $(this).attr('data-link');
-//         if($(window).scrollTop() > 0 && $(window).width()>995){
-//             sizeScrollHeader = 120;
-//         }
-//         if($(window).width()<=995){
-//             sizeScrollHeader = 70;
-//         }
-
-//         $('html, body').animate({
-//             scrollTop:  $('#'+scrolling).offset().top-sizeScrollHeader+"px";
-//         }, 1000 );
-
-//         return false;
-//         }
-//     );
-// }
 },{"jquery":2}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.2.3
