@@ -1,2 +1,6 @@
-# Responsive Single Page Layouts
-This project is for my course Responsive Single Page Layouts. It uses Sass, Compass, Susy 2.0 and shows a variety of techniques including dockable menus, responsive grids, tween and parallax effects, etc.
+# Тестовое задание webcom-media
+Рабочая(development) версия проекта лежит в папке builds/development. В директории component расположены скрипты и scss файлы. Для запуска проекта необходимо выполнить следующее:
+ 1. git clone https://github.com/delfinchick/webcomsite.git
+ 2. cd wecomsite
+ 3. npm i
+ 4. gulp
