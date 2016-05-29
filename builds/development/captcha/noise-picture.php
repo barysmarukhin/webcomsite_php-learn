@@ -1,0 +1,19 @@
+<?php
+session_start();
+$nChars=5;
+$str=substr(md5(uniqid()),0,$nChars);
+$_SESSION['randStr']=$str;
+$img=imagecreatefromjpeg('images/noise.jpg');
+$color=imagecolorallocate($img,255,50,50);
+imageantialias($img,true);
+$x=20;
+$y=30;
+$delta_x=40;
+for($i=0;$i<$nChars;$i++){
+    $size=rand(18,30);
+    $angle=-30+rand(0,60);
+    imagettftext($img,$size,$angle,$x+$i*$delta_x,$y,$color,'fonts/bellb.ttf',$str{$i});	    
+}
+header("Content-Type: image/jpeg");
+imagejpeg($img,null,50);
+?>

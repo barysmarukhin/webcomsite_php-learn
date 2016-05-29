@@ -15,8 +15,6 @@ var jQuery = $;
 $(function() {
   var topoffset = 82;
 
-  //var isTouch = 'ontouchstart' in document.documentElement;
-
 
 //Animated Scrolling
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -37,6 +35,8 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('header nav li a').removeClass('active');
     $('.nav_right__item').removeClass('activve');
+    $('.scrolltop').addClass('displaynone');
+    $('.nav_right').addClass('displaynone');    
 
     if (windowpos >= $('#maingallery').offset().top){
       $('header nav li a').removeClass('active');
@@ -50,6 +50,7 @@ $(function() {
       $('.nav_right__item').removeClass('activve');
       $('header a[href$="#about"]').addClass('active');
       $('.about__item').addClass('activve');
+      $('.nav_right').removeClass('displaynone');
     }//windowpos
 
     if (windowpos >= $('#works').offset().top){
@@ -57,6 +58,7 @@ $(function() {
       $('.nav_right__item').removeClass('activve');
       $('header a[href$="#works"]').addClass('active');
       $('.works__item').addClass('activve');
+      $('.scrolltop').removeClass('displaynone');
     }//windowpos
 
     if (windowpos >= $('#whyus').offset().top){

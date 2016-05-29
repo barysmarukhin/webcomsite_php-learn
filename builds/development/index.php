@@ -1,3 +1,52 @@
+<?php require_once("includes/initialize.php"); ?>
+<?php
+  session_start();//создаем сессию для капчи
+  $max_file_size = 1048576;   // expressed in bytes
+                              //     10240 =  10 KB
+                              //    102400 = 100 KB
+                              //   1048576 =   1 MB
+                              //  10485760 =  10 MB
+
+  if(isset($_POST['submit'])) {//Если нажата кнопка отправки комментария, и в массив POST попали данные
+    $author = trim($_POST['author']);
+    $email = trim($_POST['email']);
+    $status = trim($_POST['status']);
+    $generatedfilename = Review::generate_name($_FILES['file_upload']['name'], $generatedfilename->upload_dir);//Генерируем новое имя файла, разрешая загрузку файлов с именем в кириллице
+    $filename = basename($generatedfilename);
+    $body = trim($_POST['body']);
+    $captchamessage = '';//Пустое значение переменной, которая заполняется в случае ошибки с капчей
+    $new_review = new Review;//Создаем экземпляр класса Review
+    if($new_review->make($filename, $email, $status, $author, $body)){
+      if($new_review->save() && ($_POST['captcha']==$_SESSION['randStr'])) {
+        // Отзыв сохранен
+        // Важно!  После отправки, Вы можете загрузить эту же страницу. 
+        // Но тогда при перезагрузке страницы, форма попытается
+        // повторно отправить отзыв. Поэтому делаем перенаправление:
+        $session->message("Отзыв успешно размещен.");//Сохраняем сообщение в сессию, чтобы оно выводилось после перенаправления
+        redirect_to("index.php#sendreview");
+      } else{
+        $message = "Не удалось сохранить отзыв, попробуйте еще раз";
+      }
+    } else{
+      // Ошибка
+      if ($_POST['captcha']!=$_SESSION['randStr']) {
+        $captchamessage = "Неправильно введен код картинки";
+      }
+      if (!$_SESSION['randStr']){
+        $captchamessage = "Невозможно показать картинку с кодом. Включите графику на сайте.";
+      }
+      $message = join("<br />", $new_review->errors);//Выводим ошибки валидации из массива, наполняемого в файле review.php
+    } 
+
+  } else {
+    $author = "";
+    $status = "";
+    $body = "";
+  }
+
+
+  $reviews = Review::find_all();
+?>
 <!doctype html>
 <html lang="ru-Ru">
 <head>
@@ -35,7 +84,7 @@
     <!-- SITE CONTENT -->
     <header class="header">
       <nav id="mainnav" class="mainnav container">
-        <a href="index.html" class="header__logo">
+        <a href="index.php" class="header__logo">
           <img src="images/logo.png" alt="Webcom-media logo">
         </a>
         <ul class="header__list">
@@ -64,7 +113,7 @@
         </div>
       </nav>
       <nav id="scrollnav" class="scrollnav displaynone container">
-        <a href="index.html" class="header__logo scrollLogo">
+        <a href="index.php" class="header__logo scrollLogo">
           <img src="images/logo.png" alt="Webcom-media logo">
         </a>
         <ul class="header__list">
@@ -91,7 +140,7 @@
       </nav>
       <nav id="mobilenav" class="mobilenav container"><span class="mobile-trigger"></span>
         <div class="mobilenav__wrapper">
-          <a href="index.html" class="header__logo scrollLogo">
+          <a href="index.php" class="header__logo scrollLogo">
             <img src="images/logo.png" alt="Webcom-media logo">
           </a>
           <div class="mobilenav__buttons">
@@ -109,7 +158,7 @@
       </nav>
     </header>
     <main>
-      <div class="maingallery tracked" data-link="maingallery" id="maingallery">
+      <div class="maingallery" data-link="maingallery" id="maingallery">
         <article class="container">
           <ul id="maingallery__list" class="maingallery__list">
             <li class="maingallery__list-item">
@@ -151,7 +200,7 @@
           <a href="#about" class="maingallery__scrolldown">scrolldown text</a>
         </article>
       </div>
-      <div class="about tracked" data-link="about" id="about">
+      <div class="about " data-link="about" id="about">
         <article class="container">
           <h2 class="about__header">О компании</h2>
           <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
@@ -168,7 +217,7 @@
           </ul>
         </article>
       </div>
-      <div class="works tracked" data-link="works" id="works">
+      <div class="works " data-link="works" id="works">
         <article class="container">
           <h2 class="works__header">Наша Работа</h2>
           <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
@@ -230,14 +279,14 @@
           </ul>
         </article>
       </div>
-      <div class="calltoaction tracked" data-link="calltoaction" id="calltoaction">
+      <div class="calltoaction " data-link="calltoaction" id="calltoaction">
         <article class="container">
           <h3 class="calltoaction__header">Не упусти свой шанс! Оформи заказ прямо сейчас!</h3>
           <!-- <input id="callback" class="calltoaction__button" type="button" value="Оформить заказ"> -->
           <a href="#" id="callback" class="calltoaction__button">Оформить заказ</a>     
         </article>
       </div>
-      <div class="whyus tracked" data-link="whyus" id="whyus">
+      <div class="whyus " data-link="whyus" id="whyus">
         <article class="container">
           <h2 class="whyus__header">Почему мы</h2>
           <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
@@ -285,7 +334,7 @@
           </ul>
         </article>
       </div>
-      <div class="howwork tracked" data-link="howwork" id="howwork">
+      <div class="howwork " data-link="howwork" id="howwork">
         <article class="container">
           <h2 class="howwork__header">Как мы работаем</h2>
           <p class="howwork__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
@@ -341,51 +390,29 @@
           </ul>
         </article>
       </div>
-      <div class="review tracked" data-link="review" id="review">
+      <div class="review " data-link="review" id="review">
         <article class="container">
           <h2 class="review__header">Отзывы о нашей компании</h2>
           <ul class="review__wrapper">
-            <li class="review__slide">
-              <div class="review__container">
-                <div class="review__imgwrapper">
-                  <img src="images/photoPerson.png" alt="photo person" class="review__photo">
+            <!-- Запускаем цикл для каждой строчки таблицы $reviews -->
+            <?php foreach($reviews as $review): ?>
+              <li class="review__slide">
+                <div class="review__container">
+                  <div class="review__imgwrapper">
+                    <img src="<?php echo $review->image_path(); ?>" alt="photo person" class="review__photo">
+                  </div>
+                  <div class="review__textwrapper">
+                    <p class="review__textwrapper-name"><span><?php echo htmlentities($review->author); ?>,</span> <?php echo htmlentities($review->status); ?></p>
+                    <p class="review__textwrapper-message"><?php echo strip_tags($review->body, '<strong><em><p>'); ?>.</p>
+                    <a href="reviews.php" class="review__textwrapper-link">Все отзывы</a>
+                  </div>
                 </div>
-                <div class="review__textwrapper">
-                  <p class="review__textwrapper-name"><span>Имя Фамилия,</span> должность</p>
-                  <p class="review__textwrapper-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                  <a href="#" class="review__textwrapper-link">Все отзывы</a>
-                </div>
-              </div>
-            </li>
-            <li class="review__slide">
-              <div class="review__container">
-                <div class="review__imgwrapper">
-                  <img src="images/photoPerson.png" alt="photo person" class="review__photo">
-                </div>
-                <div class="review__textwrapper">
-                  <p class="review__textwrapper-name"><span>Иван Иванов,</span> должность</p>
-                  <p class="review__textwrapper-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                  <a href="#" class="review__textwrapper-link">Все отзывы</a>
-                </div>
-              </div>
-            </li>
-            <li class="review__slide">
-              <div class="review__container">
-                <div class="review__imgwrapper">
-                  <img src="images/photoPerson.png" alt="photo person" class="review__photo">
-                </div>
-                <div class="review__textwrapper">
-                  <p class="review__textwrapper-name"><span>Петр Петров,</span> должность</p>
-                  <p class="review__textwrapper-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                  <a href="#" class="review__textwrapper-link">Все отзывы</a>
-                </div>
-              </div>
-            </li>
+              </li>
+            <?php endforeach; ?>
           </ul>      
-          <!-- Код слайдера -->
         </article>
       </div>
-      <div class="sendreview tracked" data-link="sendreview" id="sendreview">
+      <div class="sendreview " data-link="sendreview" id="sendreview">
         <article class="container">
           <h2 class="sendreview__header">Оставьте отзыв</h2>
           <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
@@ -403,27 +430,29 @@
               info@promo-webcom.by
             </p>
           </div>
-          <form class="sendreview__sendform">
+          <form action="index.php" method="POST" enctype="multipart/form-data" class="sendreview__sendform">
+            <?php echo output_message($message)."</br>";?>
+            <?php echo output_message($captchamessage)."</br>";?>            
             <label class="sendreview__sendform-label" for="name">
             <h3 class="sendreview__sendform-header">Ваше имя</h3>
-            <input class="sendreview__sendform-input" type="text" id="name" placeholder="Иванов Иван">
+            <input class="sendreview__sendform-input" type="text" name="author" id="name" placeholder="Иванов Иван" required value="<?php echo $author;?>">
             </label>
             <label class="sendreview__sendform-label" for="email">
               <h3 class="sendreview__sendform-header">e-mail</h3>
-              <input class="sendreview__sendform-input" type="email" id="email" placeholder="example@mysite.com">
+              <input class="sendreview__sendform-input" type="email" name="email" id="email" placeholder="example@mysite.com" value="<?php echo $email; ?>">
             </label>
             <label class="sendreview__sendform-label" for="position">
               <h3 class="sendreview__sendform-header">Ваша должность</h3>
-              <input class="sendreview__sendform-input" type="text" id="position" placeholder="Должность">
+              <input class="sendreview__sendform-input" type="text" name="status" id="position" placeholder="Должность" value="<?php echo $status; ?>">
             </label>
             <label class="sendreview__sendform-label" for="reviewLabel">
               <h3 class="sendreview__sendform-header">Отзыв</h3>
-              <textarea class="sendreview__sendform-textarea" rows="5" name="reviewLabel" id="reviewLabel" placeholder="Ваше сообщение"></textarea> 
+              <textarea class="sendreview__sendform-textarea" name="body" rows="5" name="reviewLabel" id="reviewLabel" placeholder="Ваше сообщение" required><?php echo $body; ?></textarea> 
             </label>        
             <div class="sendreview__sendform-addphoto"> 
               <label class="sendreview__sendform-uploadlabel">+
-                <input id="fileupload" type="file" name="files[]" class="sendreview__sendform-fileupload">
-                <input id="fileurl" type="hidden" class="endreview__sendform-fileurl">
+                <input id="fileupload" type="file" name="file_upload" class="sendreview__sendform-fileupload">
+                <input id="fileurl" type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size; ?>" class="endreview__sendform-fileurl">
               </label>
               <input id="filename" name="filename" class="sendreview__sendform-filename">
               <span class="sendreview__sendform-span">Фото</span>
@@ -431,15 +460,15 @@
             <div class="sendreview__sendform-capcha">
               <div class="sendreview__sendorm-container_capcha">
                 <label class="sendreview__sendform-label" for="capcha">
-                  <h3 class="sendreview__sendform-header">Введите код с картинки</h3>
-                  <input class="sendreview__sendform-input" type="text" id="capcha">
-                  <div class="sendreview__sendform-picture">
-                    <img src="images/capcha.jpg" alt="captcha">
-                  </div>
-                </label>
+                <h3 class="sendreview__sendform-header">Введите код с картинки</h3>
+                <input class="sendreview__sendform-input" type="text" name="captcha" size="6" id="capcha">
+                <div class="sendreview__sendform-picture">
+                  <img src="captcha/noise-picture.php" alt="captcha">
+                </div>
+              </label>
               </div>
               <div class="sendreview__sendform-container_submit">
-                <input type="submit" class="sendreview__sendform-submit" value="Отправить">
+                <input type="submit" name="submit" class="sendreview__sendform-submit" value="Отправить">
               </div>  
             </div>     
           </form>
