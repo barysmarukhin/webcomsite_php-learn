@@ -116,7 +116,15 @@
   left: -9999px;
 }
 .sendreview__sendform-filename{
-  display:none;
+  //display:none;
+  position:absolute;
+  left:150px;
+  top:30%;
+  bottom:70%;
+  height:25px;
+  text-transform: uppercase;
+  color:$red;
+  border:none;
 }
 .sendreview__sendform-span{
   margin-left:60px;

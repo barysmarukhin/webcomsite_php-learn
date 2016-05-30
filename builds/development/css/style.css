@@ -1494,10 +1494,17 @@ p {
 
 /* line 118, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-filename {
-  display: none;
+  position: absolute;
+  left: 150px;
+  top: 30%;
+  bottom: 70%;
+  height: 25px;
+  text-transform: uppercase;
+  color: #ff8207;
+  border: none;
 }
 
-/* line 121, ../../../components/sass/modules/_sendreview.scss */
+/* line 129, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-span {
   margin-left: 60px;
   line-height: 60px;
@@ -1508,7 +1515,7 @@ p {
   font-weight: 800;
 }
 
-/* line 130, ../../../components/sass/modules/_sendreview.scss */
+/* line 138, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-capcha {
   position: relative;
 }
@@ -1521,31 +1528,31 @@ p {
 .sendreview__sendform-capcha:after {
   clear: both;
 }
-/* line 133, ../../../components/sass/modules/_sendreview.scss */
+/* line 141, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-capcha .sendreview__sendorm-container_capcha {
   float: left;
   min-width: 300px;
   width: 50%;
 }
-/* line 138, ../../../components/sass/modules/_sendreview.scss */
+/* line 146, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-capcha .sendreview__sendform-label {
   width: 100%;
 }
 
-/* line 144, ../../../components/sass/modules/_sendreview.scss */
+/* line 152, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-picture {
   width: 137px;
   height: 41px;
   margin-top: 30px;
 }
 
-/* line 149, ../../../components/sass/modules/_sendreview.scss */
+/* line 157, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-container_submit {
   width: 292px;
   float: left;
 }
 
-/* line 153, ../../../components/sass/modules/_sendreview.scss */
+/* line 161, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-submit {
   cursor: pointer;
   margin-top: 90px;

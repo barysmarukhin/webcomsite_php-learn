@@ -1,5 +1,8 @@
-<?php require_once("includes/initialize.php");
-  $reviews = Review::find_all();
+<?php
+require_once('../includes/initialize.php');
+if (!$session->is_logged_in()) { redirect_to("index.php"); }
+
+$reviews = Review::find_all();
 
   // 1. узнаем номер текущей страницы ($current_page)
   $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
@@ -17,16 +20,16 @@
   
   $pagination = new Pagination($page, $per_page, $total_count);
   
-  // Instead of finding all records, just find the records 
-  // for this page
+  // Вместо поиска всех записей, ищем лишь те, 
+  // которые относятся к данной странице
   $sql = "SELECT * FROM reviews ";
   $sql .= "LIMIT {$per_page} ";
   $sql .= "OFFSET {$pagination->offset()}";
   $reviews = Review::find_by_sql($sql);
   
-  // Need to add ?page=$page to all links we want to 
-  // maintain the current page (or store $page in $session)
-  
+  // Нужно добавить ?page=$page ко всем ссылкам 
+  // для обозначения текущей страницы (или отправить $page в $session)
+
 ?>
 
 <!doctype html>
@@ -34,32 +37,41 @@
 <head>
   <meta charset="UTF-8">
   <title>Webcom test site</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
       <nav id="mainnav" class="mainnav container">
-        <a href="index.php" class="header__logo" style="margin-top: 0;">
-          <img src="images/logo.png" alt="Webcom-media logo">
+        <a href="../index.php" class="header__logo" style="margin-top: 0;">
+          <img src="../images/logo.png" alt="Webcom-media logo">
         </a>
       </nav>
     </header>
-    <main>
+    <main>     
       <div class="review" data-link="review" id="review">
         <article class="container">
+          <div style="color:#fff; padding:20px 0;">
+            <p>Приветствую, Вас, 
+            <?php  
+              echo $session->first_name;
+            ?>
+            </p>
+            <p><a style="color:#fff;" href="logout.php">Выйти из системы</a></p>
+          </div>
           <h2 class="review__header">Отзывы о нашей компании</h2>
           <ul class="review__wrapper">
             <?php foreach($reviews as $review): ?>
               <li class="review__slide">
                 <div class="review__container">
                   <div class="review__imgwrapper">
-                    <img src="<?php echo $review->image_path(); ?>" alt="photo person" class="review__photo">
+                    <img src="<?php echo "../".$review->image_path(); ?>" alt="photo person" class="review__photo">
                   </div>
                   <div class="review__textwrapper">
                     <p class="review__textwrapper-name"><span><?php echo htmlentities($review->author); ?>,</span> <?php echo htmlentities($review->status); ?></p>
                     <p class="review__textwrapper-message"><?php echo strip_tags($review->body, '<strong><em><p>'); ?>.</p>
+                    <a href="delete_review.php?id=<?php echo $review->id; ?>" class="review__textwrapper-link">Удалить отзыв</a>
                   </div>
                 </div>
               </li>
@@ -99,7 +111,7 @@
           <article class="container">
             <div class="footer__top-logo">
               <div class="wrapper-img">
-                <img class="footer__top-img" src="images/logo.png" alt="logo">
+                <img class="footer__top-img" src="../images/logo.png" alt="logo">
               </div>
               <p class="footer__top-text">Дисклеймер компании</p>
             </div>
