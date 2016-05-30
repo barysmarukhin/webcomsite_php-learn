@@ -150,9 +150,12 @@
   }
 }
 .sendreview__sendform-picture{
-  width:137px;
-  height:41px;
+  width:210px;
+  height:39px;
   margin-top:30px;
+  img {
+    width:100%;
+  }
 }
 .sendreview__sendform-container_submit{
   width:292px;

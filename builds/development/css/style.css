@@ -1541,18 +1541,22 @@ p {
 
 /* line 152, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-picture {
-  width: 137px;
-  height: 41px;
+  width: 210px;
+  height: 39px;
   margin-top: 30px;
 }
+/* line 156, ../../../components/sass/modules/_sendreview.scss */
+.sendreview__sendform-picture img {
+  width: 100%;
+}
 
-/* line 157, ../../../components/sass/modules/_sendreview.scss */
+/* line 160, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-container_submit {
   width: 292px;
   float: left;
 }
 
-/* line 161, ../../../components/sass/modules/_sendreview.scss */
+/* line 164, ../../../components/sass/modules/_sendreview.scss */
 .sendreview__sendform-submit {
   cursor: pointer;
   margin-top: 90px;

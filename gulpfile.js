@@ -33,6 +33,7 @@ jsSources = [
   'components/scripts/header_change.js',
   'components/scripts/popup_handler.js',
   'components/scripts/filename_show.js',
+  'components/scripts/popup_submit.js',
   'components/scripts/script.js'
 ];
 sassSources = ['components/sass/style.scss'];
